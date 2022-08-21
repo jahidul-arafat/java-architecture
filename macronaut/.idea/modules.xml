@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/project_1_helloworld/hello-world-maven/hello-world-maven.iml" filepath="$PROJECT_DIR$/project_1_helloworld/hello-world-maven/hello-world-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/macronaut.iml" filepath="$PROJECT_DIR$/.idea/macronaut.iml" />
+    </modules>
+  </component>
+</project>
