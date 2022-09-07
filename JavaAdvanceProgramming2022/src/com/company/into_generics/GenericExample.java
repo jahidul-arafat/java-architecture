@@ -1,4 +1,4 @@
-package com.company.into_to_generics;
+package com.company.into_generics;
 
 import java.util.ArrayList;
 import java.util.List;
