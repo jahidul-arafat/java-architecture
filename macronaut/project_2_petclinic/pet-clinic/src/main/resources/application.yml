@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: petClinic
+datasources:
+  default:
+    driverClassName: org.postgresql.Driver
+    db-type: postgresql
+netty:
+  default:
+    allocator:
+      max-order: 3
