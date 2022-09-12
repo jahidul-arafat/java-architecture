@@ -1,0 +1,12 @@
+## Algorithm Preinit
+- [x] Big-O notation i.e. O(1), O(n)- Linear
+- [x] In deciding which algorithm to use, we often use the **worst-case time complexity** as a deciding factor.
+- [x] Time Complexities
+  - [x] 0(1) or constant time
+  - [x] 0(log(n)) or logarithmic time
+  - [x] 0(n) or linear time
+  - [x] 0(n^2) or exponential time
+  - [x] 0(n!) or factorial time
+- [x] We can also use big-0 notation to describe the space complexity.
+  - [x] Does the algorithm use constant space or as much space as the size of the input?
+- [x] Big-0 notation allows you to compare algorithms that perform the same task, regardless of input size.
