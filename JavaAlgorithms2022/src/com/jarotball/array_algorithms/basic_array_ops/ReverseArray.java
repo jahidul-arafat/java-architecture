@@ -10,6 +10,7 @@ package com.jarotball.array_algorithms.basic_array_ops;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class ReverseArray {
     public static void main(String[] args) {
@@ -30,6 +31,7 @@ public class ReverseArray {
 
         var reverseArray = reverseArrayList.stream().mapToInt(Integer::intValue).toArray();
         Arrays.stream(reverseArray).forEach(System.out::println);
+
     }
 
     /**
