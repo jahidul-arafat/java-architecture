@@ -54,10 +54,13 @@ public class CustomDoubleLinkedListMain {
         //System.out.println(demoDLL);
 
         // Delete a node
-        demoDLL.deleteNode(firstNode);  // delete first node
-        demoDLL.deleteNode(fifthNode);  // delete last node
-        demoDLL.deleteNode(thirdNode);  // delete third node or any node not the first/last node
-        demoDLL.deleteNode(new NodeD("J")); // delete a node not in the linkedlist
+        //demoDLL.deleteNode(firstNode);  // delete first node
+        //demoDLL.deleteNode(fifthNode);  // delete last node
+        //demoDLL.deleteNode(thirdNode);  // delete third node or any node not the first/last node
+        //demoDLL.deleteNode(new NodeD("J")); // delete a node not in the linkedlist
+        //System.out.println(demoDLL);
+
+        demoDLL.reverse();
         System.out.println(demoDLL);
 
     }

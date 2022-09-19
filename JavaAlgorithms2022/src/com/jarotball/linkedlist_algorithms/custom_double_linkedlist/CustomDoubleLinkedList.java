@@ -139,8 +139,8 @@ public class CustomDoubleLinkedList {
         NodeD newNode = new NodeD(new_data);
 
         // if list is already empty, then just place the newNode and make it HEAD and return
-        if(head==null){
-            head= newNode;
+        if (head == null) {
+            head = newNode;
             return;
         }
 
@@ -159,12 +159,12 @@ public class CustomDoubleLinkedList {
          * Strategy is: if any mentioned position is not in the list and pos>length --> then simply append
          * */
         int length = getLength(head); // get the length of the linkedlist
-                                     // NullPointerException if HEAD is NULL
-        if (pos>length){
+        // NullPointerException if HEAD is NULL
+        if (pos > length) {
             NodeD lastNode = head;
             // traverse to get the last node
-            while(lastNode.getNext()!=null){
-                lastNode=lastNode.getNext();
+            while (lastNode.getNext() != null) {
+                lastNode = lastNode.getNext();
             }
 
             // now simply append the newNode at the end
@@ -181,11 +181,11 @@ public class CustomDoubleLinkedList {
             currentNode = currentNode.getNext();
             pos--;
         }
-        if (currentNode==null) return; //to avoid NullPointerException
+        if (currentNode == null) return; //to avoid NullPointerException
 
         newNode.setNext(currentNode);
         newNode.setPrev(currentNode.getPrev()); // probable NullPointerException if insetPos> linkedList.length+1
-        if (currentNode.getPrev() != null ) { // condition order is important to avoid NullPointerException
+        if (currentNode.getPrev() != null) { // condition order is important to avoid NullPointerException
             currentNode.getPrev().setNext(newNode); // probable NullPointerException
         }
         currentNode.setPrev(newNode);           // probable NullPointerException
@@ -196,27 +196,25 @@ public class CustomDoubleLinkedList {
      * delete A        B->C->D->NULL
      * delete D     A->B->C->Null
      * delete B     A->C->D->Null
-     *
-     *
-     * */
-    public void deleteNode(NodeD delNode){
+     */
+    public void deleteNode(NodeD delNode) {
         // isListEmpty
         if (head == null) return;
 
         // check if the delNode is really in the linkedlist; if not simply say "item not found in list"
-        if (delNode.getNext()==null && delNode.getPrev()==null) {
-            System.out.println(String.format("Item <%s> not found in LinkedList",delNode.getData()));
+        if (delNode.getNext() == null && delNode.getPrev() == null) {
+            System.out.println(String.format("Item <%s> not found in LinkedList", delNode.getData()));
             return;
         }
 
         //is the nodeToBeDeleted the Head Node
-        if (delNode==head) {
-            head=head.getNext();
+        if (delNode == head) {
+            head = head.getNext();
             return;
         }
 
         // last node
-        if (delNode.getNext()==null){
+        if (delNode.getNext() == null) {
             delNode.getPrev().setNext(delNode.getNext());
             return;
         }
@@ -228,13 +226,69 @@ public class CustomDoubleLinkedList {
 
     }
 
-    public int getLength(NodeD head){
-        int length=0;
-        while (head.getNext()!=null){
-            head=head.getNext();
-            length+=1;
+    public void deleteNodeAtGivenPos(int pos) {
+        // check if the list is empty and pos <=0
+        if (head == null || pos < 1) return;
+
+        // pos related constraints
+        //if (pos==0) return;
+        if (pos == 1) {
+            head = head.getNext();
+            return;
+        }
+
+        // check if pos is > length(linkedlist)
+        int length = getLength(head);
+        if (pos > length) return;
+
+        // traverse to the node which needs to be deleted
+        NodeD currentNode = head;
+        while (pos > 1) {
+            currentNode = currentNode.getNext();
+            pos--;
+        }
+        if (currentNode.getPrev() != null) currentNode.getPrev().setNext(currentNode.getNext());
+        if (currentNode.getNext() != null) currentNode.getNext().setPrev(currentNode.getPrev());
+
+
+    }
+
+    public int getLength(NodeD head) {
+        int length = 0;
+        while (head.getNext() != null) {
+            head = head.getNext();
+            length += 1;
         }
         return length;
+    }
+
+    // https://www.geeksforgeeks.org/reverse-a-doubly-linked-list/
+    public void reverse(){
+        NodeD temp = null;
+        NodeD currentNode=head;
+
+        while (currentNode!=null){
+            System.out.println("CurrentNode: "+currentNode);
+            temp = currentNode.getPrev();
+            System.out.println("tmp: "+temp);
+
+            currentNode.setPrev(currentNode.getNext());
+            System.out.println(currentNode.getPrev());
+
+            currentNode.setNext(temp);
+            System.out.println(currentNode.getNext());
+
+            currentNode=currentNode.getPrev();
+            System.out.println("Current Node: "+currentNode);
+
+
+            if (temp!=null){
+                head=temp.getPrev();
+            }
+            System.out.println("Head: "+head);
+            System.out.println("----------");
+
+        }
     }
 
 

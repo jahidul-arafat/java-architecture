@@ -45,7 +45,7 @@ public class NodeD {
 
     @Override
     public String toString() {
-        return "NodeD{" +
+        return "Node{" +
                 "data=" + data +
                 '}';
     }
