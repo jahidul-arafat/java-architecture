@@ -37,19 +37,22 @@ public class NextGreaterElement {
         System.out.println("Initial Stack Status: "+demoStack);
 
         for (int i = 1; i < demoArr.length; i++) {
+            System.out.println();
             var next = demoArr[i]; //7 //2 //15
             System.out.println("Validating "+ next);
 
             //if (next< demoStack.peek()) demoStack.push(next);
             while (next > demoStack.peek()) { //15>2 //15>7
                 var popped = demoStack.pop();
-                System.out.print(popped + "-->" + next); //2 --> 15 // 7-->15
+                System.out.println("Popped: "+popped);
+                System.out.println(popped + "-->" + next); //2 --> 15 // 7-->15
                 if (demoStack.isEmpty()) break; // If you dont break here, it will raise an EmptyStack exception
             }
 
+            System.out.println("Pushing into Stack: "+ next);
             demoStack.push(next); //[16,7] //[16,7,2]
 
-            System.out.print("  Current Stack Status: "+demoStack);
+            System.out.println("Current Stack Status: "+demoStack);
             System.out.println();
         }
 
