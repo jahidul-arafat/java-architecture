@@ -2,10 +2,10 @@ package com.jarotball.firstclass_functions.functional_programming_basics;
 
 import java.util.function.Function;
 
-public class FirstClassFuncOpsBasicMain {
+public class SimulatorMain {
     public static void main(String[] args) {
         // -------------if imperative programming---------------------------
-        FirstClassFuncOpsBasic mm1 = new FirstClassFuncOpsBasic();
+        MyMath mm1 = new MyMath();
         System.out.println(mm1.triple(10)); // this will raise warning, as tripe(int x) is a static method accessed by object instances!!!
 
 
@@ -13,7 +13,7 @@ public class FirstClassFuncOpsBasicMain {
         // Step-01: Function to create a reference from anotherClass::Method
         // Create a reference to the MyMath triple(int x) function using "::" -> refer to a function/method of an existing class
         // Function<T,R> interface T: argument R: apply(T,t)
-        Function<Integer, Integer> myTriple = FirstClassFuncOpsBasic::triple;
+        Function<Integer, Integer> myTriple = MyMath::triple;
 
         // Let's call the myTriple function
         System.out.println(myTriple.apply(5)); // R apply(T t) - Apply this function to the given argument
