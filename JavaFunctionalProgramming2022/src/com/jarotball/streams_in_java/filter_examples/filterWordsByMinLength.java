@@ -6,7 +6,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class ListWordsLongerThanFiveCharacter {
+public class filterWordsByMinLength {
     public static void main(String[] args) {
         String[] wordsArr = {"hello", "functional", "programming", "is", "cool"};
 
