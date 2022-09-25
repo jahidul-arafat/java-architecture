@@ -8,6 +8,9 @@ public class SimulatorMain {
         NoArgFunction<String> demoNoArgFunc01 = ()-> "Hello";
         System.out.println(demoNoArgFunc01.apply());
 
+        PentaFunction<Double, Double, Double, Double, Double, Double> demoPentaFunc1 = (x,y,z,i,j)-> x*y*z*i*j;
+        System.out.println(demoPentaFunc1.apply(1.1,2.2,3.3,4.4,5.5));
+
     }
 
 
