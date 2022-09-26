@@ -1,0 +1,15 @@
+[Billy, Silly, Killy, Tilly, Filly]
+
+Blue Cars: [Car{make='Ford', color='blue', price=4500.0}, Car{make='Lamborghini', color='blue', price=4500.0}, Car{make='Renault', color='blue', price=4500.0}]
+Number of BLUE cars: 3
+Makes of BLUE cars: [Ford, Lamborghini, Renault]
+
+Summarizing all then Employee Salaries ...
+Acc: 0.0, Emp Salary: 13000.0, Total Salary: 13000.0
+Acc: 13000.0, Emp Salary: 43000.0, Total Salary: 56000.0
+Acc: 56000.0, Emp Salary: 33000.0, Total Salary: 89000.0
+Acc: 89000.0, Emp Salary: 63000.0, Total Salary: 152000.0
+Acc: 152000.0, Emp Salary: 73000.0, Total Salary: 225000.0
+Acc: 225000.0, Emp Salary: 23000.0, Total Salary: 248000.0
+-------------------------------------------------------
+Total Salary: 248000.0
