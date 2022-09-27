@@ -18,8 +18,9 @@ public class GetCombinedString {
             System.out.println(String.format("Word1=%s, Word2=%s, CombinedWord=%s", word1, word2, combinedWord));
             return combinedWord;
         };
-        var output = wordsList.stream()
+        var output = wordsList
+                .stream()
                 .reduce(getCombinedString);
-        System.out.println("Final Combined Word: " + getCombinedString);
+        System.out.println("Final Combined Word: " + output);
     }
 }
