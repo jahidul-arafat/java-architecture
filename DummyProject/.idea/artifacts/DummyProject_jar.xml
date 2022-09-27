@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="DummyProject:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/DummyProject_jar</output-path>
-    <root id="archive" name="DummyProject.jar">
-      <element id="module-output" name="DummyProject" />
-    </root>
-  </artifact>
-</component>
