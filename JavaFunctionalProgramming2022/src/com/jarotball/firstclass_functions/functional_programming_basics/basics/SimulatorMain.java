@@ -1,4 +1,6 @@
-package com.jarotball.firstclass_functions.functional_programming_basics;
+package com.jarotball.firstclass_functions.functional_programming_basics.basics;
+
+import com.jarotball.firstclass_functions.functional_programming_basics.basics.MyMath;
 
 import java.util.function.Function;
 

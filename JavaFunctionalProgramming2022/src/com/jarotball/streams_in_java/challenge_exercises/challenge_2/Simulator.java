@@ -133,7 +133,7 @@ public class Simulator {
                                 .map((emp)-> emp.getSalary())
                                 .reduce(0f,(acc, empSalary)-> acc+empSalary / entry.getValue().size())
                 ));
-        System.out.println("");
+        System.out.println(jobTitleByAvgSalaryMap);
 
         // using iterators
 //        var itr = jobEmpMap.entrySet().iterator();
