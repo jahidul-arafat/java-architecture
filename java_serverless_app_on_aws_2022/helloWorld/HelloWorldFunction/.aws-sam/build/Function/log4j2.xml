@@ -1,0 +1,47 @@
+<!--
+To customize log output, support logging during unit tests, and log AWS SDK calls, use Apache Log4j 2 with SLF4J.
+Log4j is a logging library for Java programs that enables you to configure log levels and use appender libraries.
+SLF4J is a facade library that lets you change which library you use without changing your function code.
+
+To add the request ID to your function's logs, use the appender in the aws-lambda-java-log4j2 library.
+The following example shows a Log4j 2 configuration file that adds a timestamp and request ID to all logs.
+
+With the configuration below, each line is prepended with the
+(a) date, time %d{yyyy-MM-dd HH:mm:ss},
+(b) request ID [%X{AWSRequestId},
+(c) log level (%-5p), and
+(d) class name(%c{1}).
+
+START RequestId: 6bc28136-xmpl-4365-b021-0ce6b2e64ab0 Version: $LATEST
+2020-03-18 08:52:43 6bc28136-xmpl-4365-b021-0ce6b2e64ab0 INFO  Handler - ENVIRONMENT VARIABLES:
+{
+    "_HANDLER": "example.Handler",
+    "AWS_EXECUTION_ENV": "AWS_Lambda_java8",
+    "AWS_LAMBDA_FUNCTION_MEMORY_SIZE": "512",
+    ...
+}
+2020-03-18 08:52:43 6bc28136-xmpl-4365-b021-0ce6b2e64ab0 INFO  Handler - CONTEXT:
+{
+    "memoryLimit": 512,
+    "awsRequestId": "6bc28136-xmpl-4365-b021-0ce6b2e64ab0",
+    "functionName": "java-console",
+    ...
+}
+
+-->
+<Configuration status="WARN">
+    <Appenders>
+        <Lambda name="Lambda">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss} %X{AWSRequestId} %-5p %c{1} - %m%n</pattern>
+            </PatternLayout>
+        </Lambda>
+    </Appenders>
+    <Loggers>
+        <Root level="all"> <!--earlier level was set to "INFO"; this blocked the Trace and Debug log messages to be logged -->
+            <AppenderRef ref="Lambda"/>
+        </Root>
+        <Logger name="software.amazon.awssdk" level="WARN" />
+        <Logger name="software.amazon.awssdk.request" level="DEBUG" />
+    </Loggers>
+</Configuration>

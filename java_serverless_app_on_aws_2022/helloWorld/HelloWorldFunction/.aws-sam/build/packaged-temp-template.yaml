@@ -4,8 +4,8 @@ Resources:
     Properties:
       Timeout: 300
       MemorySize: 128
-      Handler: helloworld.App
-      CodeUri: s3://oracle-ja/53a9064f1db498066a2b80f49061cb1c
+      Handler: helloworld.App::handleRequest
+      CodeUri: s3://oracle-ja/0d774df7fbcb715e4f67870310716ac6
       Runtime: java11
       Architectures:
       - x86_64

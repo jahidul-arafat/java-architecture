@@ -28,25 +28,72 @@
           <version>4.13.2</version>
           <scope>test</scope>
         </dependency>
+        <!-- Some log4j dependency added| manually-->
+        <!-- aws-lambda-java-log4j2 is required to append RequestID to our log-->
+        <!-- https://docs.aws.amazon.com/lambda/latest/dg/java-package.html -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-lambda-java-log4j2</artifactId>
+            <version>1.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j18-impl</artifactId>
+            <version>2.18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>
       <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-shade-plugin</artifactId>
-          <version>3.2.4</version>
-          <configuration>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>package</phase>
-              <goals>
-                <goal>shade</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+          <!--Previous Plugin has been replaced, as I have used aws-lambda-java-log42j library in my dependency to append the RequestID in my log
+          - For this I have to configure a transformer for the Maven Shade plugin.
+          - The transformer library combines versions of a cache file that append in both the appender library and in log4j.
+          URL: https://docs.aws.amazon.com/lambda/latest/dg/java-package.html
+           -->
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-shade-plugin</artifactId>
+              <version>3.2.2</version>
+              <configuration>
+                  <createDependencyReducedPom>false</createDependencyReducedPom>
+              </configuration>
+              <executions>
+                  <execution>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>shade</goal>
+                      </goals>
+                      <configuration>
+                          <transformers>
+                              <transformer implementation="com.github.edwgiz.maven_shade_plugin.log4j2_cache_transformer.PluginsCacheFileTransformer">
+                              </transformer>
+                          </transformers>
+                      </configuration>
+                  </execution>
+              </executions>
+              <dependencies>
+                  <dependency>
+                      <groupId>com.github.edwgiz</groupId>
+                      <artifactId>maven-shade-plugin.log4j2-cachefile-transformer</artifactId>
+                      <version>2.13.0</version>
+                  </dependency>
+              </dependencies>
+          </plugin>
       </plugins>
     </build>
 </project>
