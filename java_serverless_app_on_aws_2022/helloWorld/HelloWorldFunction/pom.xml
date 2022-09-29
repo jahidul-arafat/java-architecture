@@ -56,6 +56,13 @@
             <artifactId>lombok</artifactId>
             <version>RELEASE</version>
         </dependency>
+
+        <!-- aws x-ray integration-->
+<!--        <dependency>-->
+<!--            <groupId>com.amazonaws</groupId>-->
+<!--            <artifactId>aws-xray-recorder-sdk-core</artifactId>-->
+<!--            <version>1.2.1</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

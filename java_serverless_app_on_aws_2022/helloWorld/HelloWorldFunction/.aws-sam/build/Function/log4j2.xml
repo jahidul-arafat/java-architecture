@@ -38,6 +38,8 @@ START RequestId: 6bc28136-xmpl-4365-b021-0ce6b2e64ab0 Version: $LATEST
         </Lambda>
     </Appenders>
     <Loggers>
+        <!-- Change log level on the fly using environment variable as mentioned below-->
+        <!-- Root level="{env:LOG_LEVEL}" -->
         <Root level="all"> <!--earlier level was set to "INFO"; this blocked the Trace and Debug log messages to be logged -->
             <AppenderRef ref="Lambda"/>
         </Root>

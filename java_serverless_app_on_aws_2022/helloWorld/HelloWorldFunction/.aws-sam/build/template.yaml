@@ -2,9 +2,9 @@ Resources:
   Function:
     Type: AWS::Serverless::Function
     Properties:
-      Timeout: 300
-      MemorySize: 128
-      Handler: helloworld.App::handleRequest
+      Timeout: 303
+      MemorySize: 1664
+      Handler: helloworld.App
       CodeUri: Function
       Runtime: java11
       Architectures:

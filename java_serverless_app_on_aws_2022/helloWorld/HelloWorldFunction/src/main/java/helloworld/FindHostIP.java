@@ -32,7 +32,7 @@ public class FindHostIP {
             // remove the HTML tags
             result=result.replaceAll("<[^>]*>","");
             log.info("Returning the result from function");
-            return result;
+            return "Lambda Served You From: "+result;
         }
     }
 }

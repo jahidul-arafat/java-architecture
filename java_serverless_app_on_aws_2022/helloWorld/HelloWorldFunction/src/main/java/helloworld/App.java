@@ -99,7 +99,9 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
         try {
             log.info("Before calling checkip");
             final String lambdaHostServerIP = FindHostIP.findLambdaHostServerIPAddress(demoURL); // get the ip of my local machine running the lambda function locally
-            final String GREETING_MSG="Hello Returned from Lambda";
+            final String GREETING_MSG="Thanks for visiting this serverless Application/Lambda developed using JAVA, designed in AWS  \n" +
+                    "Designed by Jahidul Arafat, Sr. Architect, Oracle, JAPAC\n" +
+                    "Visit: https://www.linkedin.com/in/jahidul-arafat-791a7490/";
             log.info("After calling checkip");
 
             //String output = String.format("{\"message\": \"%s\", \"Location(IP)\": \"%s\" }", GREETING_MSG, lambdaHostServerIP);
