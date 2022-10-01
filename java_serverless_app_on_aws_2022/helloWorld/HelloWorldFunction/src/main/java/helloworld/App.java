@@ -4,6 +4,8 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
+import com.amazonaws.xray.AWSXRay;
+import com.amazonaws.xray.entities.Subsegment;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -41,27 +43,23 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
      *  getAwsRequestId();      -> String
      *  getLogGroupName();      -> String
      *  getLogStreamName();     -> String
-     *
      *  getFunctionName();      -> String
      *  getFunctionVersion();   -> String
      *  getFunctionVersionArn();-> String
      *  getIdentity();          -> String | Amazon Cognito - handles request authentication; provides solution to control access to AWS resources from your app.
-     *
      *  getRemainingTimeInMillis(); -> int
      *  getMemoryLimit();           -> int
-     *
      *  getLogger();            -> Logger/Interface
-     *
      * */
     @Override
     public APIGatewayProxyResponseEvent handleRequest(final APIGatewayProxyRequestEvent input,
                                                       final Context context) {
-        /**
-         * Create a HashMap <K,V>; This will store the "Content-Type" and "X-Custom-Header" information;
-         * These information will be added to the response that will be returned from the Lambda Function
-         * Here, content-type = application/json
-         * x-custom-header = application/json
-         * */
+        /*
+          Create a HashMap <K,V>; This will store the "Content-Type" and "X-Custom-Header" information;
+          These information will be added to the response that will be returned from the Lambda Function
+          Here, content-type = application/json
+          x-custom-header = application/json
+          */
 
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
@@ -91,14 +89,33 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
         //var demoURL= "https://bup.edu.bd/";
         var demoURL="https://checkip.amazonaws.com";
 
-        // Create the ProxyResponse (along with the header information we just create above) that gonna be returned to the caller
+        // Create the ProxyResponse (along with the header information we just create above) that going to be returned to the caller
         // The ProxyResponse includes a GREETING_MSG and server status code: 200/500 along with the header info we set above
 
         APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent()
                 .withHeaders(headers); // set the header info lambda function will return to caller
         try {
             log.info("Before calling checkip");
+
+            // Sending custom info to xray trace using Subsegment
+            // Even if you have enabled x-ray from the AWS console, you cant trace this external call to the function <findLambdaHostServerIPAddress(demoURL)>
+            // What if you want the X-RAY daemon trace this external call?
+            // For this we have some pre-requisite setup in the POM.XML
+            /*
+             (a) adding the aws xray sdk submodule <aws-xray-recorder-sdk-core>;
+              Using this submodule we will manually create a segment of this external call trace and transmit the segment to the X-RAY daemon.
+              We must manually close this segment.
+              ** Note: You must add this Lambda segment info into the UnitTest. Otherwise, maven build will fail.
+             */
+            // throwing error: FacadeSegments cannot be mutated.: java.lang.UnsupportedOperationException
+            // this happened because instead of closing the subSegment, I closed the segment itself.
+            // Solution: use AWSXRAY.endSubsegment();
+
+            Subsegment subsegment = AWSXRay.beginSubsegment("## Calling external service <findHostIP> ...");
             final String lambdaHostServerIP = FindHostIP.findLambdaHostServerIPAddress(demoURL); // get the ip of my local machine running the lambda function locally
+            AWSXRay.endSubsegment(); // end the subsegment, not the segment. If you mistakenly close the segment itself, this will raise an exception.
+
+
             final String GREETING_MSG="Thanks for visiting this serverless Application/Lambda developed using JAVA, designed in AWS  \n" +
                     "Designed by Jahidul Arafat, Sr. Architect, Oracle, JAPAC\n" +
                     "Visit: https://www.linkedin.com/in/jahidul-arafat-791a7490/";

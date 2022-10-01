@@ -11,6 +11,29 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <!-- Add X-ray SDK submodule to have more granular control on the trace data
+    By Default your application doesn't require x-ray sdk in the pom.xml.
+    X-RAY daemon collects the following trace data for you:
+        (a) HTTP calls
+        (b) AWS resource downstream calls
+        (c) SQL Connection
+    But if you have any other customized info that you want to send to the X-RAY Daemon, then you need to have the
+    X-RAY SDK with Specific submodule in your project's POM.XML page. I am going to use following submodules under dependencyManagement:
+        (a) aws-xray-recorder-sdk-bom – Provides a bill of materials that you can use to specify the version to use for all submodules.
+        (b) aws-xray-recorder-sdk-core (required) – Basic functionality for creating segments and transmitting segments. Includes AWSXRayServletFilter for instrumenting incoming requests.
+    -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-xray-recorder-sdk-bom</artifactId>
+                <version>2.11.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.amazonaws</groupId>
@@ -28,6 +51,7 @@
           <version>4.13.2</version>
           <scope>test</scope>
         </dependency>
+
         <!-- Some log4j dependency added| manually-->
         <!-- aws-lambda-java-log4j2 is required to append RequestID to our log-->
         <!-- https://docs.aws.amazon.com/lambda/latest/dg/java-package.html -->
@@ -54,15 +78,15 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>RELEASE</version>
+            <version>1.18.24</version>
         </dependency>
 
-        <!-- aws x-ray integration-->
-<!--        <dependency>-->
-<!--            <groupId>com.amazonaws</groupId>-->
-<!--            <artifactId>aws-xray-recorder-sdk-core</artifactId>-->
-<!--            <version>1.2.1</version>-->
-<!--        </dependency>-->
+        <!-- aws x-ray integration | submodule added | Required/Not-optional-->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-xray-recorder-sdk-core</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

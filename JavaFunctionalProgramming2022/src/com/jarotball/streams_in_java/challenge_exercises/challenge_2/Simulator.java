@@ -47,7 +47,7 @@ public class Simulator {
 
         // 1.3 returns function based on JobTitle
         Function<String, Function<Employee, Boolean>> empFuncFactoryByJobTitle =
-                (jobTitle)-> (emp)-> emp.getJobTitle()==jobTitle;
+                (jobTitle)-> (emp)-> emp.getJobTitle().equalsIgnoreCase(jobTitle);
 
         var developersOnly = empFuncFactoryByJobTitle.apply("developer");
         var salesOnly = empFuncFactoryByJobTitle.apply("sales");
@@ -113,7 +113,7 @@ public class Simulator {
          *                          -> convert it into stream
          *                          -> get into the values (empObjects) {a list of empObjects} of each Key/JobTitle
          *                              --> convert this list{empObjects} of specific Key/JobTitle into stream
-         *                              --> map each empObject to empSalary | at this point we has this
+         *                              --> map each empObject to empSalary | at this point we have this
          *                              {developer:{23000,33000,33000}, sales: {13000,11000,13000,13000,43000}}
          *                              -> reduce the salaries of each category to total_salary and then get avg= total_salary_per_category / total_developers
          * Output Format:  Map<String, Float>

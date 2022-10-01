@@ -61,7 +61,7 @@ public class Simulator {
         List<Car> carList = Arrays.asList(carArray);
 
         // 2.3 Define the filter Predicate Function
-        Predicate<Car> carFilterPredicate = (car) -> car.getColor() == "blue";
+        Predicate<Car> carFilterPredicate = (car) -> car.getColor().equalsIgnoreCase("blue");
 
         // 2.4 Get the list of all BLUE colored cars
         var carOnlyBlueList = carList.stream()

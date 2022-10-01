@@ -5,7 +5,7 @@ Resources:
       Timeout: 300
       MemorySize: 128
       Handler: employeeops.App
-      CodeUri: Function
+      CodeUri: s3://oracle-ja/945837a49ba21d88a82fd77052cd8ea7
       Runtime: java11
       Architectures:
       - x86_64
