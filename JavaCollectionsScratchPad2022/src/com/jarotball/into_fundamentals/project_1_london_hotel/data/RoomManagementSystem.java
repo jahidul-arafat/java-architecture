@@ -10,8 +10,9 @@ public class RoomManagementSystem {
     // constructor
     public RoomManagementSystem(){
         // 2. Initialize Collection and assign it to the Room Inventory
-        //this.inventory = new HashSet<>();
-        this.inventory = new LinkedHashSet<>();
+        //this.inventory = new HashSet<>(); // HashSet doesn't guarantee order
+        this.inventory = new LinkedHashSet<>(); // why LinkedHasSet? - to maintain the order the way rooms were added into the Collection/inventory
+
     }
 
     // getter and setter
@@ -63,6 +64,48 @@ public class RoomManagementSystem {
     // custom_method_6: Return a new Collection of Rooms where Room#type matches the provided string.
     // The original Room Inventory collection MUST NOT BE MODIFIED
 
+    public List<String> getRoomsByType(String roomType){
+        // grouping rooms by type
+        var roomsByType = this.inventory
+                .stream()
+                .collect(Collectors.groupingBy(room -> room.getType().toLowerCase()))
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        (entry)-> entry.getKey(),
+                        (entry)-> entry.getValue()
+                                .stream()
+                                .map(room -> room.getName())
+                                .collect(Collectors.toList())
+                ));
+
+        if (roomsByType.containsKey(roomType)){
+            return roomsByType.get(roomType);
+        }
+        return null;
+    }
+
+    // Get rooms by capacity
+    // i.e. how many 3person rooms are there?
+    public List<String> getRoomsByCapacity(int capacity){
+        var roomsByCapacity = this.inventory
+                .stream()
+                .collect(Collectors.groupingBy(Room::getCapacity))
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        (entry)-> entry.getKey(),
+                        (entry)-> entry.getValue()
+                                .stream()
+                                .map(room -> room.getName())
+                                .collect(Collectors.toList())
+                ));
+        if (roomsByCapacity.containsKey(capacity)){
+            return roomsByCapacity.get(capacity);
+        }
+        return null;
+    }
+
 
 
 
@@ -100,7 +143,7 @@ public class RoomManagementSystem {
     }
 
     //
-    public void getAvgRoomRateByType() {
+    public Map<String, Double> getAvgRoomRateByType() {
         var avgRoomRateByType = this.inventory
                 .stream()
                 .collect(Collectors.groupingBy(room -> room.getType().toLowerCase()))
@@ -117,7 +160,7 @@ public class RoomManagementSystem {
                                 .findFirst()
                                 .orElse(0)
                 ));
-        System.out.println(avgRoomRateByType);
+        return avgRoomRateByType;
     }
 
 
