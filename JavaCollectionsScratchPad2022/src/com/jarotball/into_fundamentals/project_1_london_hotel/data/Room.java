@@ -6,7 +6,9 @@ public class Room {
     private final String name;
     private final String type;
     private final int capacity;
-    private final double rate;
+    private double rate;
+
+    private boolean petFriendly;
 
     // constructor
     public Room(String name, String type, int capacity, double rate) {
@@ -14,6 +16,7 @@ public class Room {
         this.type = type;
         this.capacity = capacity;
         this.rate = rate;
+        this.petFriendly=false;
     }
 
     // Getter
@@ -32,6 +35,18 @@ public class Room {
 
     public double getRate() {
         return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public boolean isPetFriendly() {
+        return petFriendly;
+    }
+
+    public void setPetFriendly(boolean petFriendly) {
+        this.petFriendly = petFriendly;
     }
 
     // override the equals() method to use value-based comparison instead instance-based comparison
