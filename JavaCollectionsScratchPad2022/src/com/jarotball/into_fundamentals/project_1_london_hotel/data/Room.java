@@ -66,6 +66,8 @@ public class Room {
 //                room.type,
 //                room.capacity
 //                );
+        System.out.format("Comparing %s with %s%n",
+                ((Room) o).name, this.name);
 
         if (capacity != room.capacity) return false;
         if (!Objects.equals(name, room.name)) return false;
