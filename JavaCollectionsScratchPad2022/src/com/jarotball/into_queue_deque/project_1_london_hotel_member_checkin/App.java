@@ -1,8 +1,7 @@
-package com.jarotball.into_queue_deque.project_1_basics;
+package com.jarotball.into_queue_deque.project_1_london_hotel_member_checkin;
 
 import com.jarotball.into_list.project_1_london_hotel_guest_checkin_loyalty.data.Guest;
 
-import java.util.ArrayDeque;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
