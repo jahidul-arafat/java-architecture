@@ -1,0 +1,12 @@
+------- Before Switch -------
+{R2=Killy, R1=Billy}
+
+------- At Switch (In-Progress) -------
+
+------- After Switch -------
+{R2=Billy, R1=Killy}
+
+------- Validating if equals() and hashCode() overridden! -------
+R1-> Killy
+Comparing R2 with R2
+R2-> Billy
