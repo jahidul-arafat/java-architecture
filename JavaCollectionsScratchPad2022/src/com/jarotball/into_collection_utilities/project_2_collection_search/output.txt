@@ -1,0 +1,13 @@
+Result: 4
+-3
+Min: RoomVer2{name='Daloy', type='Suite', capacity=1, rate=14.0, isPetFriendly=false}
+Max: RoomVer2{name='FaloyG', type='Premiere Room', capacity=2, rate=550.0, isPetFriendly=false}
+Daloy              Suite            14.000000
+Caloy              Guest Room       24.000000
+Miami              HotelRoom        123.440000
+Aaloy              Aoom             124.000000
+Baloy              Koom             124.000000
+Baloy              Room             124.000000
+Ealoy              Goom             124.000000
+Faloy              Premiere Room    550.000000
+FaloyG             Premiere Room    550.000000

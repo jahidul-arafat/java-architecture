@@ -1,18 +1,48 @@
 
 ---- Without Sort ----------------------------
-Baloy              Room             124.000000
-Aaloy              Room             124.000000
-Daloy              Suite            124.000000
-Caloy              Guest Room       124.000000
-Faloy              Premiere Room    124.000000
-Ealoy              Room             124.000000
-Baloy              Guest Room       124.000000
+Baloy              Room                 3                 124.000000
+Aaloy              Room                 5                 110.000000
+Daloy              Suite                1                 14.000000
+Caloy              Guest Room           1                 24.000000
+Faloy              Premiere Room        2                 550.000000
+Ealoy              Room                 3                 120.000000
+Baloy              Guest Room           4                 1700.000000
 
----- If implemented Comparator::compareTo ----
-Aaloy              Room             124.000000
-Baloy              Guest Room       124.000000
-Baloy              Room             124.000000
-Caloy              Guest Room       124.000000
-Daloy              Suite            124.000000
-Ealoy              Room             124.000000
-Faloy              Premiere Room    124.000000
+---- 1. If implemented Comparator::compareTo / Sort byName/then byType:: Natural Order ----
+Aaloy              Room                 5                 124.000000
+Baloy              Guest Room           4                 1700.000000
+Baloy              Room                 3                 124.000000
+Caloy              Guest Room           1                 24.000000
+Daloy              Suite                1                 14.000000
+Ealoy              Room                 3                 124.000000
+Faloy              Premiere Room        2                 550.000000
+
+---- 2.1 Instead natural alphabetic order, sort the rooms by their daily rate -----
+Daloy              Suite                1                 14.000000
+Caloy              Guest Room           1                 24.000000
+Baloy              Room                 3                 124.000000
+Aaloy              Room                 5                 124.000000
+Ealoy              Room                 3                 124.000000
+Faloy              Premiere Room        2                 550.000000
+Baloy              Guest Room           4                 1700.000000
+
+---- 2.2 if sort by Room Capacity/ non-natural-ordering / Descending Order ------------
+---- 3x rooms having same rate; sort by their name -----
+Daloy              Suite                1                 14.000000
+Caloy              Guest Room           1                 24.000000
+Aaloy              Guest Room           5                 124.000000
+Baloy              Room                 3                 124.000000
+Ealoy              Beauty Room          3                 124.000000
+Faloy              Premiere Room        2                 550.000000
+Baloy              Guest Room           4                 1700.000000
+
+---- 2.3 What if rooms having same rate and name; sort by type ---------
+Daloy              Suite                1                 14.000000
+Caloy              Guest Room           1                 24.000000
+Aaloy              Guest Room           5                 124.000000
+Baloy              Room                 3                 124.000000
+Ealoy              Beauty Room          3                 124.000000
+Faloy              Premiere Room        2                 550.000000
+Baloy              Guest Room           4                 1700.000000
+
+

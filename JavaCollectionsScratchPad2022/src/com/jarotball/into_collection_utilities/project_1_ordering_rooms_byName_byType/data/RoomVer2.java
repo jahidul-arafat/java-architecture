@@ -1,12 +1,39 @@
 package com.jarotball.into_collection_utilities.project_1_ordering_rooms_byName_byType.data;
 
+import java.util.Comparator;
 import java.util.Objects;
 /**
  * public interface Comparable<T> {
  *     public int compareTo(T o);
  * }
+ *
+ * When you define the logic, make sure its reusable
+ * (a) through either a comparable implementation for natural sort order
+ * (b) or through Comparator.comparing().thenComparing()....
  * */
+
 public class RoomVer2 implements Comparable<RoomVer2> {
+
+    // class attribute
+    // Let's avoid the natural sort of rooms, instead sort them in terms of their daily rate
+    // What if 2 rooms have the same daily rate, then sort by their Name in alphabetic order
+    // what if 2 rooms have the same daily rate and name, then sort by their Type
+    public static Comparator<RoomVer2> RATE_COMPARATOR = Comparator.comparing(RoomVer2::getRate);
+    public static Comparator<RoomVer2> RATE_NAME_COMPARATOR = Comparator.comparing(RoomVer2::getRate)
+            .thenComparing(RoomVer2::getName);
+    public static Comparator<RoomVer2> RATE_NAME_TYPE_COMPARATOR = Comparator.comparing(RoomVer2::getRate)
+            .thenComparing(RoomVer2::getName)
+            .thenComparing(RoomVer2::getType);
+
+    // sort the rooms in terms of their capacity
+    // what if two room have the same capacity; then sort in terms of their (a) name, then (b)type
+    public static Comparator<RoomVer2> CAPACITY_COMPARATOR = Comparator.comparing(RoomVer2::getCapacity);
+    public static Comparator<RoomVer2> CAP_NAME_TYPE_COMPARATOR = Comparator.comparing(RoomVer2::getCapacity)
+            .thenComparing(RoomVer2::getName)
+            .thenComparing(RoomVer2::getType);
+
+
+    // instance attribute
     public final String name;
     public final String type;
     public final int capacity;
@@ -103,4 +130,5 @@ public class RoomVer2 implements Comparable<RoomVer2> {
         int resultByName = this.getName().compareTo(o.getName()); // return +n, -n, 0
         return resultByName!=0? resultByName: this.getType().compareTo(o.getType());
     }
+
 }
