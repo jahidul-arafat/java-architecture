@@ -5,6 +5,7 @@ import com.jarotball.into_list.project_1_london_hotel_guest_checkin_loyalty.data
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -77,7 +78,7 @@ public class BookingService {
         //print();
     }
 
-    // custom_method_3
+    // custom_method_
     public void print() {
         System.out.format("%n------ Printing the Map<Room, Guest> ------%n");
         var output = bookingMap.entrySet()

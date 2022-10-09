@@ -1,0 +1,18 @@
+
+---- Without Sort ----------------------------
+Baloy              Room             124.000000
+Aaloy              Room             124.000000
+Daloy              Suite            124.000000
+Caloy              Guest Room       124.000000
+Faloy              Premiere Room    124.000000
+Ealoy              Room             124.000000
+Baloy              Guest Room       124.000000
+
+---- If implemented Comparator::compareTo ----
+Aaloy              Room             124.000000
+Baloy              Guest Room       124.000000
+Baloy              Room             124.000000
+Caloy              Guest Room       124.000000
+Daloy              Suite            124.000000
+Ealoy              Room             124.000000
+Faloy              Premiere Room    124.000000
