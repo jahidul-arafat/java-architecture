@@ -1,0 +1,28 @@
+------ Booking a Room to Guest  ------
+true
+
+------ Booking a Room to Guest  ------
+false
+
+------ Booking a Room to Guest  ------
+true
+
+------ Booking a Room to Guest  ------
+true
+
+------ Printing the Map<Room, Guest> ------
+Guest Cilly at Room R2
+Guest Dilly at Room R3
+Guest Ailly at Room R1
+
+------ Calculating Booked Room Total Revenue ------
+1200.0
+
+------ Switching Room ------
+Room1: R1
+Room2: R3
+
+------ Printing the Map<Room, Guest> ------
+Guest Cilly at Room R2
+Guest Ailly at Room R3
+Guest Dilly at Room R1
