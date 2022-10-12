@@ -1,0 +1,14 @@
+Welcome to booking system
+Billy have booked Harry on Monday, remaining seat available 4
+Cilly have booked Harry on Tuesday, remaining seat available 4
+Dilly have booked Harry on Monday, remaining seat available 3
+Eilly have booked Harry on Tuesday, remaining seat available 3
+Filly have booked Harry on Monday, remaining seat available 2
+Gilly have booked Harry on Tuesday, remaining seat available 2
+Billy have booked Harry on Monday, remaining seat available 1
+Cilly have booked Harry on Tuesday, remaining seat available 1
+Dilly have booked Harry on Monday, remaining seat available 0
+Eilly have booked Harry on Tuesday, remaining seat available 0
+Hairdresser Harry is not available on Monday
+Hairdresser Harry is not available on Tuesday
+Hilly have booked Jill on Wednesday, remaining seat available 4
