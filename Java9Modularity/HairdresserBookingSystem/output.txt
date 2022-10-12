@@ -1,4 +1,4 @@
-Welcome to booking system
+-----Welcome to booking system------
 Billy have booked Harry on Monday, remaining seat available 4
 Cilly have booked Harry on Tuesday, remaining seat available 4
 Dilly have booked Harry on Monday, remaining seat available 3
