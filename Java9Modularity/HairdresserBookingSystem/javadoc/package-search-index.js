@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"bookingmgmtsystem","l":"bookingmgmtsystem"},{"m":"customer","l":"customers"},{"m":"hairdresser","l":"employees"},{"m":"bookingmgmtsystem","l":"scheduling"}];updateSearchResults();
