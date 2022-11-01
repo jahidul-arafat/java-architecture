@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="com.example.client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_example_client_jar</output-path>
+    <root id="archive" name="com.example.client.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="com.example.client" />
+      <element id="module-output" name="com.example.renderer" />
+      <element id="module-output" name="com.example.data" />
+    </root>
+  </artifact>
+</component>
