@@ -4,11 +4,12 @@ import java.util.Date;
 
 public class GroceryRecord {
     private final String memberNumber;
-    private final Date dateOfPurchase;
+    //private final Date dateOfPurchase;
+    private final String dateOfPurchase;
     private final String itemDescription;
 
     // constructor
-    public GroceryRecord(String memberNumber, Date dateOfJoining, String itemDescription) {
+    public GroceryRecord(String memberNumber, String dateOfJoining, String itemDescription) {
         this.memberNumber = memberNumber;
         this.dateOfPurchase = dateOfJoining;
         this.itemDescription = itemDescription;
@@ -19,7 +20,7 @@ public class GroceryRecord {
         return memberNumber;
     }
 
-    public Date getDateOfPurchase() {
+    public String getDateOfPurchase() {
         return dateOfPurchase;
     }
 

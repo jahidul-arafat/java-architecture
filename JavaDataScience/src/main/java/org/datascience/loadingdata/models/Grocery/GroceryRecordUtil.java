@@ -11,7 +11,8 @@ public class GroceryRecordUtil {
     public static GroceryRecord parseGroceryItem(CSVRecord record){
         try {
             String memberNumber = record.get("Member_number");
-            Date dateOfPurchase = new SimpleDateFormat("dd-MM-yyyy").parse(record.get("Date"));
+            //Date dateOfPurchase = new SimpleDateFormat("dd-MM-yyyy").parse(record.get("Date"));
+            String dateOfPurchase = record.get("Date");
             String itemDescription = record.get("itemDescription");
 
             return new GroceryRecord(memberNumber, dateOfPurchase, itemDescription);

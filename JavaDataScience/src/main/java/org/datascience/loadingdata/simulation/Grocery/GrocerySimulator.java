@@ -5,7 +5,8 @@ import org.datascience.loadingdata.models.Grocery.GroceryRecord;
 import org.datascience.loadingdata.models.Grocery.GroceryRecordUtil;
 import org.datascience.loadingdata.utils.CSVLoader;
 
-import java.security.Key;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -39,9 +40,6 @@ public class GrocerySimulator {
          * 10. Find the items purchased by a specific customer
          * 11. Find total purchases on a specific day
          * 12. Find the customers who has purchased on a specific day
-         *
-         *
-         *
          */
 
         // 1. How many total unique members at this Grocery shop, made a purchase
@@ -77,7 +75,7 @@ public class GrocerySimulator {
 
         // 2.1 Search Technique for itemPurchasedPerMember
         Function<String,Long> searchItemPurchasedPerMember = (memberNumber)-> itemPurchasedPerMember.get(memberNumber);
-        System.out.println(searchItemPurchasedPerMember.apply("3050"));
+        System.out.println("Search Item purchased by member: "+searchItemPurchasedPerMember.apply("3050"));
 
         // 3. Total items purchased by all Members
         var totalItemPurchasedByAllMembers = groceryRecordList
@@ -138,16 +136,104 @@ public class GrocerySimulator {
         //System.out.println("copy: "+ copyItemPurchasedPerMember);
         //System.out.println("original:" + itemPurchasedPerMember);
 
-        // how many Members purchased the maximum number of items i.e. 33 and who are those customers
+        // Output Expected: {2=248, 3=54, 4=328, 5=178, 6=371}
+        var itemCountMemberCount = swapItemPurchasePerMember
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        (entry)-> entry.getKey(),
+                        (entry)-> entry.getValue()
+                                .stream()
+                                .collect(Collectors.counting())
+                ));
+        System.out.println("Item Count Member Count: "+ itemCountMemberCount);
+
+        // total members
+        var totalMembersRetrieved = itemCountMemberCount
+                .values()
+                .stream()
+                .reduce(0l, (acc,x)-> acc+x);
+        System.out.println("Total Members Retrieved: "+ totalMembersRetrieved);
 
         // how many customers purchased the minimum number of items i.e. 2 and who are those customers
+        System.out.println(minItems.getValue()+ " " + itemCountMemberCount.get(minItems.getValue())+ " "+ swapItemPurchasePerMember.get(minItems.getValue()));
 
-        // swapItemPurchasePerMember
+        // // how many Members purchased the maximum number of items and who are those customers
+        System.out.println(maxItems.getValue()+ " " + itemCountMemberCount.get(maxItems.getValue())+ " "+ swapItemPurchasePerMember.get(maxItems.getValue()));
 
 
+        // 8. Find the customers whose total purchase is below average
+
+        // 9. Find the customers whole total purchase is above average
+        // 10. Find the items purchased by a specific customer
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        System.out.println();
+        var itemsPurchasedByMembers = groceryRecordList
+                .stream()
+                .collect(Collectors.groupingBy(GroceryRecord::getMemberNumber));
+
+        Function<String, Void> itemListByMember = (memberNumber)->{
+            itemsPurchasedByMembers
+                    .get(memberNumber)
+                    .stream()
+                    .forEach((item)-> {
+                        try {
+                            System.out.format("Item (%s), purchased on (%s) by Member (%s)%n",
+                                    item.getItemDescription(),
+                                    simpleDateFormat.parse(item.getDateOfPurchase()),
+                                    item.getMemberNumber());
+                        } catch (ParseException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+            return null;
+
+        };
+
+        itemListByMember.apply("2304");
+        System.out.println();
+        itemListByMember.apply("3640");
 
 
+        // 11. Find total purchases on a specific day
+        System.out.println();
+        var itemPurchasedByDate = groceryRecordList
+                .stream()
+                .collect(Collectors.groupingBy(GroceryRecord::getDateOfPurchase));
 
+        System.out.println("Purchasing Dates: "+ itemPurchasedByDate.keySet());
+
+        Function<String, Void> purchasedOnDateFunc = (onDate)-> {
+            itemPurchasedByDate.get(onDate)
+                    .stream()
+                    .forEach(item -> System.out.println(item.getItemDescription()+ " " + item.getMemberNumber()));
+            return null;
+
+        };
+
+        // how many days of purchase
+        System.out.println("Days of Purchase: "+ itemPurchasedByDate.keySet().size());
+
+        // purchase made on a specific date
+        purchasedOnDateFunc.apply("16-02-2015");
+        System.out.println();
+
+        //purchasedOnDateFunc.apply("05-01-2015");
+
+
+        // 12. Find whether a customer made purchase on a specific day
+        BiFunction<String,String,List<String>> hasCustomerPurchasedOnDate = (memberNumber, dateOfPurchase)-> {
+            if (!itemPurchasedByDate.keySet().contains(dateOfPurchase))
+                return new ArrayList<>();
+            return itemPurchasedByDate
+                    .get(dateOfPurchase)
+                    .stream()
+                    .filter(item -> item.getMemberNumber().equals(memberNumber))
+                    .map(item-> item.getItemDescription())
+                    .collect(Collectors.toList());
+        };
+
+        System.out.println(hasCustomerPurchasedOnDate.apply("3891","16-02-2015"));
 
 
     }
