@@ -1,0 +1,38 @@
+FromDateFormatted: Sun Jan 01 00:30:00 BDT 2012
+ToDateFormatted: Sun Jan 01 02:30:00 BDT 2012
+Traversing Weather Record: Date for: 2012_01_01 00:02:14 Barometric Pressure 30.5 Humidity: 74.2
+Traversing Weather Record: Date for: 2012_01_01 00:08:29 Barometric Pressure 30.5 Humidity: 73.6
+Traversing Weather Record: Date for: 2012_01_01 00:14:45 Barometric Pressure 30.6 Humidity: 75.0
+Traversing Weather Record: Date for: 2012_01_01 00:21:00 Barometric Pressure 30.6 Humidity: 76.6
+Traversing Weather Record: Date for: 2012_01_01 00:27:16 Barometric Pressure 30.6 Humidity: 77.0
+Traversing Weather Record: Date for: 2012_01_01 00:33:31 Barometric Pressure 30.6 Humidity: 76.0
+---------------------------------------------------------
+BeginDate Found. Registering BeginDate Flag .......
+X1: 5
+Y1: Date for: 2012_01_01 00:33:31 Barometric Pressure 30.6 Humidity: 76.0
+---------------------------------------------------------
+Traversing Weather Record: Date for: 2012_01_01 00:39:46 Barometric Pressure 30.6 Humidity: 76.6
+Traversing Weather Record: Date for: 2012_01_01 00:46:01 Barometric Pressure 30.6 Humidity: 75.2
+Traversing Weather Record: Date for: 2012_01_01 00:52:16 Barometric Pressure 30.5 Humidity: 77.4
+Traversing Weather Record: Date for: 2012_01_01 00:58:32 Barometric Pressure 30.5 Humidity: 77.8
+Traversing Weather Record: Date for: 2012_01_01 01:04:48 Barometric Pressure 30.5 Humidity: 78.4
+Traversing Weather Record: Date for: 2012_01_01 01:11:03 Barometric Pressure 30.5 Humidity: 77.8
+Traversing Weather Record: Date for: 2012_01_01 01:17:19 Barometric Pressure 30.6 Humidity: 79.2
+Traversing Weather Record: Date for: 2012_01_01 01:23:34 Barometric Pressure 30.6 Humidity: 78.0
+Traversing Weather Record: Date for: 2012_01_01 01:29:50 Barometric Pressure 30.6 Humidity: 74.4
+Traversing Weather Record: Date for: 2012_01_01 01:36:06 Barometric Pressure 30.6 Humidity: 73.2
+Traversing Weather Record: Date for: 2012_01_01 01:42:22 Barometric Pressure 30.6 Humidity: 75.4
+Traversing Weather Record: Date for: 2012_01_01 01:48:37 Barometric Pressure 30.6 Humidity: 75.2
+Traversing Weather Record: Date for: 2012_01_01 01:54:52 Barometric Pressure 30.6 Humidity: 76.2
+Traversing Weather Record: Date for: 2012_01_01 02:01:08 Barometric Pressure 30.6 Humidity: 75.0
+Traversing Weather Record: Date for: 2012_01_01 02:07:24 Barometric Pressure 30.6 Humidity: 77.0
+Traversing Weather Record: Date for: 2012_01_01 02:13:39 Barometric Pressure 30.6 Humidity: 77.8
+Traversing Weather Record: Date for: 2012_01_01 02:19:56 Barometric Pressure 30.6 Humidity: 77.4
+Traversing Weather Record: Date for: 2012_01_01 02:26:18 Barometric Pressure 30.6 Humidity: 75.8
+Traversing Weather Record: Date for: 2012_01_01 02:32:34 Barometric Pressure 30.6 Humidity: 74.4
+---------------------------------------------------------
+EndDate Found. Registering EndDate Flag .......
+X2: 24
+Y2: Date for: 2012_01_01 02:32:34 Barometric Pressure 30.6 Humidity: 74.4
+---------------------------------------------------------
+Barometric Pressure Slope is <0.0>, Forecast:  Stable or Declining

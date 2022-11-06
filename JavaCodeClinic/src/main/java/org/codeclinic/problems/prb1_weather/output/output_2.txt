@@ -1,0 +1,43 @@
+FromDateFormatted: Sun Jan 01 00:30:00 BDT 2012
+ToDateFormatted: Sun Jan 01 02:30:00 BDT 2012
+---------------------------------------------------------
+BeginDate Found. Registering BeginDate Flag .......
+X1: 5
+Y1: Date for: 2012_01_01 00:33:31 Barometric Pressure 30.6 Humidity: 76.0
+---------------------------------------------------------
+---------------------------------------------------------
+EndDate Found. Registering EndDate Flag .......
+X2: 24
+Y2: Date for: 2012_01_01 02:32:34 Barometric Pressure 30.6 Humidity: 74.4
+---------------------------------------------------------
+Barometric Pressure Slope is <0.0>, Forecast:  Stable Weather
+
+FromDateFormatted: Fri Mar 15 10:30:00 BDT 2013
+ToDateFormatted: Sun Mar 17 02:30:00 BDT 2013
+---------------------------------------------------------
+BeginDate Found. Registering BeginDate Flag .......
+X1: 81252
+Y1: Date for: 2013_03_15 10:36:13 Barometric Pressure 28.0 Humidity: 72.6
+---------------------------------------------------------
+---------------------------------------------------------
+EndDate Found. Registering EndDate Flag .......
+X2: 81614
+Y2: Date for: 2013_03_17 02:33:34 Barometric Pressure 27.6 Humidity: 69.4
+---------------------------------------------------------
+Barometric Pressure Slope is <-0.001104972375690604>, Forecast:  Inclement Weather is Close in
+
+FromDateFormatted: Sat Jun 21 10:00:00 BDT 2014
+ToDateFormatted: Wed Jun 25 23:59:59 BDT 2014
+---------------------------------------------------------
+BeginDate Found. Registering BeginDate Flag .......
+X1: 179955
+Y1: Date for: 2014_06_21 10:00:33 Barometric Pressure 29.99 Humidity: 55.4
+---------------------------------------------------------
+---------------------------------------------------------
+EndDate Found. Registering EndDate Flag .......
+X2: 180996
+Y2: Date for: 2014_06_26 00:03:30 Barometric Pressure 29.7 Humidity: 68.2
+---------------------------------------------------------
+Barometric Pressure Slope is <-2.785782901056668E-4>, Forecast:  Inclement Weather is Close in
+
+Process finished with exit code 0
