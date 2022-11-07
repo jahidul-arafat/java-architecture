@@ -23,18 +23,16 @@ public class TextLoader {
         (b) bufferedRead with FileReader
      */
 
-    public static List<String> parseLines(String fileName){
+    public static List<String> parseLines(String fileName) {
         List<String> linesList = new ArrayList<>();
-        try(BufferedReader bfReader = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader bfReader = new BufferedReader(new FileReader(fileName))) {
             String line;
-            Boolean skipFirstLine = true;
-            while ((line=bfReader.readLine())!=null){
+            while ((line = bfReader.readLine()) != null) {
                 linesList.add(line);
             }
 
-
         } catch (Exception e) {
-            System.out.println("Exception: "+ e.getMessage());
+            System.out.println("Exception: " + e.getMessage());
         }
         return linesList;
     }
