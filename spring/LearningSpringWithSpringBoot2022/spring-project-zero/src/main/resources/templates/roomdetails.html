@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>London Hotel: Room Details</title>
+</head>
+<body>
+  <h1>ROOM DETAILS</h1>
+  <table>
+    <tr>
+      <td>Room</td>
+      <td>Room Number</td>
+      <td>Bed Info</td>
+    </tr>
+    <tr th:each="room:${roomDetails}" >
+      <td th:text="${room.getName()}">Room</td>
+      <td th:text="${room.getRoomNumber()}">Room Number</td>
+      <td th:text="${room.getBedInfo()}">Bed Info</td>
+    </tr>
+
+  </table>
+
+
+</body>
+</html>

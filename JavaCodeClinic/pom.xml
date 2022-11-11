@@ -7,14 +7,50 @@
     <groupId>org.example</groupId>
     <artifactId>JavaCodeClinic</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+    </parent>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.json/json -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20180130</version>
+            <version>20220924</version>
+        </dependency>
+
+        <!-- csv loading   -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.4.2</version>
         </dependency>
     </dependencies>
+
+    <!-- Package as an executable jar -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${parent.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
