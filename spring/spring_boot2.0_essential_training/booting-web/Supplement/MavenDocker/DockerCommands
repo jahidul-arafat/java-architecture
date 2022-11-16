@@ -1,0 +1,8 @@
+# to get into its terminal
+# docker image having the jre
+docker run -it --rm mvn_image /bin/bash
+
+# port mapping
+# --rm means, after execution remove the container footprint and filesystem
+docker run -it --rm -p 8080:8080 mvn_image
+

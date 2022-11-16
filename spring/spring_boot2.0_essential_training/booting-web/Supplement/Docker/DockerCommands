@@ -1,0 +1,24 @@
+# docker build -t myimage .
+# docker run -it --rm my_image
+# docker run -it --rm my_image arg2 arg3 arg4 ; this will override the CMD at the last line of the Dockerfile
+# -i interactive
+# -t tty
+# --rm The --rm flag is there to tell the Docker Daemon to clean up the container and remove the file system after the container exits.
+
+# Override the Docker Entrypoint
+docker run -entrypoint <command and arguments>
+
+# Keep Docker Container Running (if not entrypoint in the Dockerfile)
+docker run -t -d my_image     # use -t tty and -d detached in background parameters to keep docker container running even after exit
+
+# Now lets try to enter into the Docker Container terminal
+docker exec -it 0ab99d8ab11c /bin/bash
+
+# Dockerfile having entrypoint exit after executing the ENTYPOINT command and argument.
+# But if you want the docker remain alive even after the entry point, override the entrypoint before the docker_image_name
+# Never place the entrypoint after the docker image name
+docker run -it --entrypoint /bin/bash my_image
+
+
+Ref:
+> https://medium.com/swlh/understand-dockerfile-dd11746ed183

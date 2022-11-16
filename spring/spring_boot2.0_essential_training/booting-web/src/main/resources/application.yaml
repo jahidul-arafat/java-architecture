@@ -1,0 +1,13 @@
+server:
+  port: 8181
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+server:
+  port: 8282
+spring:
+  config:
+    activate:
+      on-profile: uat
