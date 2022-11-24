@@ -20,10 +20,10 @@ public class RoomRestController {
     }
 
     // rest_api localhost:8080/api/rooms
-    @GetMapping("/rooms")
+    @GetMapping("/room")
     public List<Room> getAllRooms(){
         List<Room> roomList = this.roomService.getRoomDetails();
-        roomList.sort(Comparator.comparing(Room::getRoomNumber));
+        //roomList.sort(Comparator.comparing(Room::getRoomNumber));
         return roomList;
     }
 }

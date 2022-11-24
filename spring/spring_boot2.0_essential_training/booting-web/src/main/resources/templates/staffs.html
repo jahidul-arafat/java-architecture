@@ -12,10 +12,10 @@
       <td>Name</td>
       <td>Position</td>
     </tr>
-    <tr th:each="staff: ${staffMemberDetails}">
-      <td th:text="${staff.getEmpID()}"></td>
-      <td th:text="${staff.getEmpLastName()}+','+${staff.getEmpFirstName()}"}></td>
-      <td th:text="${staff.getEmpPosition()}"></td>
+    <tr th:each="emp: ${employeeDetails}">
+      <td th:text="${emp.getEmpID()}"></td>
+      <td th:text="${emp.getEmpLastName()}+','+${emp.getEmpFirstName()}"}></td>
+      <td th:text="${emp.getEmpPosition()}"></td>
     </tr>
   </table>
 

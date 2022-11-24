@@ -12,7 +12,7 @@ import java.util.List;
 
 // Adding dynamic Data to a webpage in a Spring Boot application
 @Controller
-@RequestMapping("/rooms")
+@RequestMapping("/room")
 public class RoomController {
     private final RoomService roomService;
 
@@ -21,10 +21,10 @@ public class RoomController {
     }
 
     // Controller method going to take a model element; Model model
-    @GetMapping
+    @GetMapping("/details")
     public String getAllRooms(Model model){
         List<Room> roomDetails = this.roomService.getRoomDetails();
-        roomDetails.sort(Comparator.comparing(Room::getRoomNumber));
+        //roomDetails.sort(Comparator.comparing(Room::getRoomNumber));
 
         // add the attribute into the model with the attributeName that we have passed in the Thymeleaf template
         model.addAttribute("roomDetails",roomDetails);

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5a60595-fe1a-446b-9868-7499945ee381" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/clr/FizzBuzzClrApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/restcontrolelrs/FizzBuzzRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/services/FizzBuzzService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-clr/src/main/java/com/example/roomclr/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LearningSpringWithSpringBoot2022/spring-project-zero/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../LearningSpringWithSpringBoot2022/spring-project-zero/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/controllers/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/restcontrollers/RoomRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/restcontrollers/RoomRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/StaffMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/StaffMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/resources/application.yaml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/fizzbuzz_short_version">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2HyhwXHK5FAPaoXV7Pggo1BNkgP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/jarotball/Study/java_architect/spring/spring_boot2.0_essential_training/booting-web/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "spring.configuration.checksum": "e696ea7ee25363bcb1ce69fffd20558a",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/booting-web/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.roomclr" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BootingWebApplication">
+    <configuration name="FizzBuzzClrApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.fizzbuzz.clr.FizzBuzzClrApplication" />
+      <module name="fizzbuzz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.fizzbuzz.clr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzBuzzService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.fizzbuzz.services.FizzBuzzService" />
+      <module name="fizzbuzz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.fizzbuzz.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootingWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="booting-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.bootingweb.BootingWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzBuzzClrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="fizzbuzz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fizzbuzz.clr.FizzBuzzClrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.fizzbuzz.clr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzbuzzApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="fizzbuzz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fizzbuzz.FizzbuzzApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzbuzzShortVersionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="fizzbuzz-short-version" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fizzbuzzshortversion.FizzbuzzShortVersionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomClrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="room-clr" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.roomclr.RoomClrApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FizzBuzzClrApplication" />
+        <item itemvalue="Spring Boot.FizzBuzzClrApplication" />
+        <item itemvalue="Application.FizzBuzzService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5a60595-fe1a-446b-9868-7499945ee381" name="Changes" comment="" />
+      <created>1669263469513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669263469513</updated>
+      <workItem from="1669263470593" duration="3236000" />
+      <workItem from="1669266976207" duration="8203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

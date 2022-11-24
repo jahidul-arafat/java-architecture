@@ -14,6 +14,6 @@ public enum Position {
 
     @Override
     public String toString() {
-        return position;
+        return position.toString();
     }
 }

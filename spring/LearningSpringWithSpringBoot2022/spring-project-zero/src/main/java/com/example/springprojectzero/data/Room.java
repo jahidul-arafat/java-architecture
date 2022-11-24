@@ -9,7 +9,7 @@ public class Room {
     @Id                                                     // primary_key
     @GeneratedValue(strategy = GenerationType.IDENTITY)         // value auto_increment
     @Column(name = "ROOM_ID")                               // map to the Table Column
-    private long id;                                        // out attributeName which mapped to the above table_column
+    private long id;                                        // our attributeName which mapped to the above table_column
     @Column(name = "NAME")
     private String name;
     @Column(name = "ROOM_NUMBER")
