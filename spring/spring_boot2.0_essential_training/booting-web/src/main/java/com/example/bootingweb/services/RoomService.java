@@ -59,4 +59,11 @@ public class RoomService {
         roomList.sort(Comparator.comparing(Room::getName));
         return roomList;
     }
+
+    // find a room by id
+    // like select * from room where roomId =id
+    public Room getRoomByID(long id){
+        return roomRepository.findById(id).get(); // return the RoomObject
+    }
+
 }

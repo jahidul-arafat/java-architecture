@@ -5,22 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a60595-fe1a-446b-9868-7499945ee381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/clr/FizzBuzzClrApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/restcontrolelrs/FizzBuzzRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/services/FizzBuzzService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/room-clr/src/main/java/com/example/roomclr/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LearningSpringWithSpringBoot2022/spring-project-zero/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../LearningSpringWithSpringBoot2022/spring-project-zero/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/nodejsApp/consumer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/nodejsApp/producer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/nodejsApp/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/pythonApp/consumer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/pythonApp/producer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/Supplement/RabbitMQ/pythonApp/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/async/RoomCleanerListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/config/AsyncConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/controllers/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/endpoints/GreetingEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/models/AsyncPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booting-web/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/src/main/java/com/example/employeeclr/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/src/main/java/com/example/employeeclr/EmployeeClrApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee-clr/src/test/java/com/example/employeeclr/EmployeeClrApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/src/main/java/com/example/roomcleanernotifier/AsyncPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/src/main/java/com/example/roomcleanernotifier/RoomCleanerNotifierApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/src/main/java/com/example/roomcleanernotifier/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/room-cleaner-notifier/src/test/java/com/example/roomcleanernotifier/RoomCleanerNotifierApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booting-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/controllers/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/models/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/restcontrollers/RoomRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/restcontrollers/RoomRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/StaffMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/java/com/example/bootingweb/services/StaffMemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booting-web/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booting-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booting-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/clr/FizzBuzzClrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fizzbuzz/src/main/java/com/example/fizzbuzz/clr/FizzBuzzClrApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fizzbuzz/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room-clr/src/main/java/com/example/roomclr/RoomClrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/room-clr/src/main/java/com/example/roomclr/RoomClrApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +109,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "18",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
     "last_opened_file_path": "/Users/jarotball/Study/java_architect/spring/spring_boot2.0_essential_training/booting-web/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,7 +117,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "spring.configuration.checksum": "e696ea7ee25363bcb1ce69fffd20558a",
+    "spring.configuration.checksum": "5a49d2497a615217f2a08fccec06f784",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,10 +126,11 @@
       <recent name="$PROJECT_DIR$/booting-web/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.employeeclr" />
       <recent name="com.example.roomclr" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BootingWebApplication">
+  <component name="RunManager" selected="Spring Boot.EmployeeClrApplication">
     <configuration name="FizzBuzzClrApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.fizzbuzz.clr.FizzBuzzClrApplication" />
       <module name="fizzbuzz" />
@@ -134,6 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeClrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="employee-clr" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.employeeclr.EmployeeClrApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FizzBuzzClrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="fizzbuzz" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fizzbuzz.clr.FizzBuzzClrApplication" />
@@ -157,6 +196,13 @@
     <configuration name="FizzbuzzShortVersionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="fizzbuzz-short-version" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.fizzbuzzshortversion.FizzbuzzShortVersionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomCleanerNotifierApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="room-cleaner-notifier" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.roomcleanernotifier.RoomCleanerNotifierApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,10 +234,23 @@
       <updated>1669263469513</updated>
       <workItem from="1669263470593" duration="3236000" />
       <workItem from="1669266976207" duration="8203000" />
+      <workItem from="1669431526356" duration="2104000" />
+      <workItem from="1669788144098" duration="1661000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

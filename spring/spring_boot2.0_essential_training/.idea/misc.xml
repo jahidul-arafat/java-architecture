@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/room-clr/pom.xml" />
         <option value="$PROJECT_DIR$/fizzbuzz/pom.xml" />
         <option value="$PROJECT_DIR$/fizzbuzz-short-version/pom.xml" />
+        <option value="$PROJECT_DIR$/employee-clr/pom.xml" />
+        <option value="$PROJECT_DIR$/room-cleaner-notifier/pom.xml" />
       </list>
     </option>
   </component>

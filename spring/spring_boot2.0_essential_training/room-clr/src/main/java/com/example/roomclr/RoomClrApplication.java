@@ -43,7 +43,7 @@ public class RoomClrApplication {
     public CommandLineRunner commandLineRunner(RestTemplate restTemplate){
         return args -> {
             LOG.info("Starting CLR application");
-            ResponseEntity<List<Room>> roomList = restTemplate.exchange("http://localhost:8080/api/rooms",
+            ResponseEntity<List<Room>> roomList = restTemplate.exchange("http://localhost:8080/api/room",
                     HttpMethod.GET, null, new ParameterizedTypeReference<List<Room>>() {
                     });
             roomList.getBody()

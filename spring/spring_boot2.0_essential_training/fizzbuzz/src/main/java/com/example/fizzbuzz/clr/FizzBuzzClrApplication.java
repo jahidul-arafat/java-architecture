@@ -33,7 +33,7 @@ public class FizzBuzzClrApplication {
     public CommandLineRunner commandLineRunner(RestTemplate restTemplate){
         return args -> {
             LOG.info("Starting FizzBuzz CLR application");
-            ResponseEntity<List> numFizzBuzzList = restTemplate.exchange("http://localhost:8080/api/fizzbuzz",
+            ResponseEntity<List> numFizzBuzzList = restTemplate.exchange("http://localhost:8181/api/fizzbuzz",
                     HttpMethod.GET, null, new ParameterizedTypeReference<List>() {
                     });
             numFizzBuzzList.getBody()
