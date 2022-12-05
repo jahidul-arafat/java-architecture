@@ -8,6 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface TourPackageRepository extends JpaRepository<TourPackage, String> {
+
+    // Non-default method; created by me // not available in JPA
     Optional<TourPackage> findByName(String pkgName);
     // in the TourService, when creating a new tour, tour has a dependency of tourPackage (must be already exists)
     // in the create a new tour section in TourService, we not gonna enter the tourPackage code, instead tourPackageName

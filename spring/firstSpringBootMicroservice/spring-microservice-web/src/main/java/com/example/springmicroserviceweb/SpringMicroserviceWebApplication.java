@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringMicroserviceWebApplication {
     private static final Logger LOG = LoggerFactory.getLogger(SpringMicroserviceWebApplication.class);
-    @Value("${springmicroserviceweb.importfile}")
+    @Value("${springmicroserviceweb.importfile}") // this is imported from resources/application.properties
     private String importFile;
 
     @Autowired // must //bcoz of CLR
