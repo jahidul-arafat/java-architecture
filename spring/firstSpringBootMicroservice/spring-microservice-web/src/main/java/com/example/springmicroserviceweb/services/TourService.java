@@ -51,7 +51,7 @@ public class TourService {
         // So, first check, whether the tourPackage of the 'tourPackageName' really exists
         // if so, return that tourPackage
         // else, a RunTime exception will arise
-        TourPackage tourPackage = tourPackageRepository.findById(tourPackageName).orElseThrow(()->
+        TourPackage tourPackage = tourPackageRepository.findByName(tourPackageName).orElseThrow(()->
                 new RuntimeException("Tour package does not exist: "+tourPackageName));
 
         // Second phase, if the tourPackage already exists, that create the tour with the tourPackage
@@ -71,6 +71,11 @@ public class TourService {
     }
 
 
+    // Business Service -02
+    // Get all the tour lists available
+    public Iterable<Tour> lookup(){
+        return tourRepository.findAll();
+    }
     // Business Service -02
     // Count the total number of tours in the database
     // JpaRepository  query will return a 'long' instead 'int'

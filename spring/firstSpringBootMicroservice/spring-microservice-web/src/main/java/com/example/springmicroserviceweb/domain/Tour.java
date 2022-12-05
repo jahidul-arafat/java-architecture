@@ -32,7 +32,7 @@ public class Tour {
     @Column
     private String duration;
 
-    @Column
+    @Column(length = 2000)
     private String bullets;
 
     @Column
@@ -59,7 +59,8 @@ public class Tour {
     // Constructor
     // this is not an AllArgument Constructor
     // The main purpose of creating this constructor is to create a new Tour in the TourService
-    public Tour(String title, String description, String blurb, Integer price, String duration, String bullets, String keywords, TourPackage tourPackage, Region region, Difficulty difficulty) {
+    public Tour(String title, String description, String blurb, Integer price, String duration,
+                String bullets, String keywords, TourPackage tourPackage, Region region, Difficulty difficulty) {
         this.title = title;
         this.description = description;
         this.blurb = blurb;

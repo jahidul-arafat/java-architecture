@@ -4,6 +4,7 @@ import com.example.springmicroserviceweb.domain.TourPackage;
 import com.example.springmicroserviceweb.repositories.TourPackageRepository;
 import com.example.springmicroserviceweb.repositories.TourRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 /*
@@ -18,6 +19,8 @@ import org.springframework.stereotype.Service;
 public class TourPackageService {
     private final TourPackageRepository tourPackageRepository;
 
+
+
     // Business Service-01
     // Create a Tour package
     // .findById()
@@ -28,6 +31,7 @@ public class TourPackageService {
         return tourPackageRepository.findById(pkgCode)
                 .orElse(tourPackageRepository.save(new TourPackage(pkgCode,pkgName)));
     }
+
 
     // Business Service-02
     // Find all the tour packages

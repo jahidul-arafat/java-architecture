@@ -6,10 +6,20 @@ import lombok.AllArgsConstructor;
 // thats why @Component annotation is not required
 @AllArgsConstructor
 public enum Region {
-    CENTRAL_COAST("Central California"),
-    SOUTHERN_CALIFORNIA("Southern California"),
-    NORTHERN_CALIFORNIA("Northern California"),
-    VARIES("Varies");
+    Central_Coast("Central Coast"),
+    Southern_California("Southern California"),
+    Northern_California("Northern California"),
+    Varies("Varies");
+
 
     private String label;
+
+    public static Region findByLabel(String byLabel) {
+        for(Region r: Region.values()) {
+            if (r.label.equalsIgnoreCase(byLabel))
+                return r;
+        }
+        return null;
+    }
+
 }
