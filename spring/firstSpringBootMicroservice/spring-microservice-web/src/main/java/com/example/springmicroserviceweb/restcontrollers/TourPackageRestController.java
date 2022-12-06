@@ -25,8 +25,8 @@ public class TourPackageRestController {
     }
 
     // RestEndpoint02: Get the tourPackage Details by the tourPackage <code>
-    @GetMapping("/tourPackage/code")
-    public Optional<TourPackage> getTourPkgDetailsByCode(@PathVariable String code){
+    @GetMapping("/tourPackage/{code}")
+    public Optional<TourPackage> getTourPkgDetailsByCode(@PathVariable(value = "code") String code){
         return tourPackageService.getTourPkdDetailsByCode(code);
 
     }
