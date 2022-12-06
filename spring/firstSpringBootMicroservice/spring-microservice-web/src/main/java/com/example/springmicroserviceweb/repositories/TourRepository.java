@@ -5,15 +5,43 @@ import com.example.springmicroserviceweb.domain.Region;
 import com.example.springmicroserviceweb.domain.Tour;
 import com.example.springmicroserviceweb.domain.TourPackage;
 import jakarta.persistence.criteria.CriteriaBuilder;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+/*
+ * Modify the Default behavior of Paging and Sorting
+ * Default Paging - page 0
+ * Default Size=20
+ * Default Sort = des
+ */
+
+// Danger that Spring Data REST expose
+/*
+ *
+ * As we have seen earlier, the Spring Data Rest enables us not only lookup  the entities, but also allow us to
+ * Create (HTTP POST), Update (PUT/PATCH) and delete(DELETE) them
+ * But I dont think we should allow this in public to modify our database in this way
+ *
+ * Solution
+ * --------
+ * Use @RepositoryRestResource(exported=false) at Class Level
+ * Use @RestResource(exported=false) at the method level
+ */
+
+// Default endpoint of the repository: http://localhost:9090/tours
+// No need to rename the default endpoint
+//
+@Repository //- this will expose CRUD operations to public which we dont want; thats why we override some methods and make them false to make it publicly unavailable
 public interface TourRepository extends JpaRepository<Tour, Integer> {
     // Invalid return type will raise RunTimeException
     // Spring Data JPA facilitates fast failure
@@ -21,7 +49,10 @@ public interface TourRepository extends JpaRepository<Tour, Integer> {
     // Create some custom Query Method Signatures not available at default Jpa
     // Method Signature-1: Find all Tours in a TourPackage
     // user will enter the TourPackage code and return a List of all Tours in the Package
-    List<Tour> findByTourPackageCode(String code);
+    // http://localhost:9090/tours/search/findByTourPackageCode?code=CC&size=2&sort=title,asc
+
+    Page<Tour> findByTourPackageCode(@Param("code") String code, Pageable pageable);
+    // @Param("code") for the previous version of Spring Data Rest; but the new Version doesnt require this @Param annotation
 
     // Method Signature-2: Find all tours by their title
     Optional<Tour> findByTitle(String title); // return One or zero Tour; titles are unique
@@ -70,6 +101,35 @@ public interface TourRepository extends JpaRepository<Tour, Integer> {
 
 
 
+    // now override the default Create, Update and Delete methods of JpaRepository
+    // And make them publicly unavailable by using @RestResource(exported=false)
 
 
+    @Override
+    @RestResource(exported = false)
+    <S extends Tour> List<S> saveAll(Iterable<S> entities);
+
+    @Override
+    @RestResource(exported = false)
+    <S extends Tour> S save(S entity);
+
+    @Override
+    @RestResource(exported = false)
+    void deleteById(Integer integer);
+
+    @Override
+    @RestResource(exported = false)
+    void delete(Tour entity);
+
+    @Override
+    @RestResource(exported = false)
+    void deleteAllById(Iterable<? extends Integer> integers);
+
+    @Override
+    @RestResource(exported = false)
+    void deleteAll(Iterable<? extends Tour> entities);
+
+    @Override
+    @RestResource(exported = false)
+    void deleteAll();
 }

@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /*
 * Create the Following Business Services
 * 1. Create a tourPackage                   createTourPackage()
@@ -46,6 +48,12 @@ public class TourPackageService {
     public long total(){
         return tourPackageRepository.count();
 
+    }
+
+    // Business Service-04
+    // Get the tour Package details by code
+    public Optional<TourPackage> getTourPkdDetailsByCode(String pkgCode){
+        return tourPackageRepository.findById(pkgCode);
     }
 
 }

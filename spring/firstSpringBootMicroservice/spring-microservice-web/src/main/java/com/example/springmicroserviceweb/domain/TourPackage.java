@@ -26,7 +26,7 @@ import lombok.*;
 public class TourPackage {
 
     @Id
-    private String code; // this is not auto-generated; we have to provide it
+    private String code; // this is not auto-generated; we have to provide it either in the POST method or in the PUT method
 
     @Column
     private String name;
