@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class TourPackageRestController {
     private final TourPackageService tourPackageService;
@@ -27,7 +27,7 @@ public class TourPackageRestController {
     // RestEndpoint02: Get the tourPackage Details by the tourPackage <code>
     @GetMapping("/tourPackage/{code}")
     public Optional<TourPackage> getTourPkgDetailsByCode(@PathVariable(value = "code") String code){
-        return tourPackageService.getTourPkdDetailsByCode(code);
+        return tourPackageService.getTourPkgDetailsByCode(code);
 
     }
 }

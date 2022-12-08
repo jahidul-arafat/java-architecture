@@ -52,7 +52,7 @@ public class TourPackageService {
 
     // Business Service-04
     // Get the tour Package details by code
-    public Optional<TourPackage> getTourPkdDetailsByCode(String pkgCode){
+    public Optional<TourPackage> getTourPkgDetailsByCode(String pkgCode){
         return tourPackageRepository.findById(pkgCode);
     }
 

@@ -62,6 +62,9 @@ public class SpringMicroserviceWebApplication {
                 c2.updateAndGet(v -> v + 1);
             });
 
+            // Create TourRatings
+            // import the tourRatings JSON file
+
 
             LOG.info("Ending CLR application");
         };

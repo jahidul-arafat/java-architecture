@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a60595-fe1a-446b-9868-7499945ee381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRatingPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/repositories/TourRatingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/dto/RatingDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/AllRestfulCalls.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourRatingRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourRatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/SpringMicroserviceWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/SpringMicroserviceWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRatingPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRatingPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/repositories/TourRatingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/repositories/TourRatingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourPackageRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourPackageRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourPackageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourPackageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "/Users/jarotball/Study/java_architect/spring/spring_boot2.0_essential_training",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "spring.configuration.checksum": "b8c28b24691ff3c5c59ee22e4561c9f2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jarotball/Study/java_architect/spring/spring_boot2.0_essential_training&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b8c28b24691ff3c5c59ee22e4561c9f2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/booting-web/src/main/resources" />
@@ -194,7 +202,8 @@
       <workItem from="1669266976207" duration="8203000" />
       <workItem from="1669431526356" duration="2104000" />
       <workItem from="1669788144098" duration="1661000" />
-      <workItem from="1670212487115" duration="7235000" />
+      <workItem from="1670212487115" duration="10240000" />
+      <workItem from="1670495128465" duration="843000" />
     </task>
     <servers />
   </component>

@@ -34,7 +34,7 @@ public class TourRating {
     * comment   string max 255characters
      */
     @EmbeddedId // as this is a Composite Primary key, we have to use @EmbeddedId annotation instead of @Id annotation
-    private TourRatingPK pk;
+    private TourRatingPK pk;    //tour and customerId
 
     @Column(nullable = false)   // rating must be there // cant be nullable
     private Integer score;

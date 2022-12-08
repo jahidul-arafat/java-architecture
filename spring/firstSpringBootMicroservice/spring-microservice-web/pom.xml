@@ -57,6 +57,12 @@
             <artifactId>spring-data-rest-hal-explorer</artifactId>
         </dependency>
 
+        <!-- for Rating DTO Validation Starter which is not included by default in Since Spring 2.3.0 RELEASE -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
