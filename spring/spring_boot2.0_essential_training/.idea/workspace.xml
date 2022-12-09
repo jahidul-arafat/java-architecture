@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5a60595-fe1a-446b-9868-7499945ee381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/dto/RatingDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/AllRestfulCalls.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourRatingRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourRatingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/SpringMicroserviceWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/SpringMicroserviceWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRatingPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/domain/TourRatingPK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/repositories/TourRatingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/repositories/TourRatingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourPackageRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/restcontrollers/TourPackageRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourPackageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/java/com/example/springmicroserviceweb/services/TourPackageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpringBootMicroservice/spring-microservice-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +192,8 @@
       <workItem from="1669431526356" duration="2104000" />
       <workItem from="1669788144098" duration="1661000" />
       <workItem from="1670212487115" duration="10240000" />
-      <workItem from="1670495128465" duration="843000" />
+      <workItem from="1670495128465" duration="944000" />
+      <workItem from="1670557460822" duration="3870000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-microservice-web</artifactId>
+    <artifactId>spring-microservice-web-JPASolution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-microservice-web</name>
     <description>Explore Simple Dummy Spring Boot Microservice</description>
