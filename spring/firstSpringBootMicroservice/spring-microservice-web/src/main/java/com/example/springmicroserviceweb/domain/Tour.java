@@ -43,7 +43,7 @@ public class Tour {
     // Tour Have a Many-to-One relationship with TourPackage
     // Multiple Tour can be in a Tour package
     @ManyToOne
-    private TourPackage tourPackage;
+    private TourPackage tourPackage; // tourPackageCode will come in the table as the in the Tour Table, tourPackageCode is marked to be the Foreign Key to map to TourPackage repository
 
     // Tour Enumerated Attributes
     // Enumerated Attribute-01: Tour belongs to which Region

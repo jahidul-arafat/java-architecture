@@ -19,6 +19,9 @@ import lombok.*;
 * Q. Is there a difference between using the @Id and @EmbeddedId annotations when referencing a compound key?
 * Sol: The @EmbeddedId and @IdClass annotations are used to denote composite primary keys
  */
+
+// REST Controller will not directly talk to the TalkRating as the Object is little complex
+// REST Controller will talk to a DTO <RatingDto> to pass the talk to tourRating wither for POST, PUT, PATCH
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
