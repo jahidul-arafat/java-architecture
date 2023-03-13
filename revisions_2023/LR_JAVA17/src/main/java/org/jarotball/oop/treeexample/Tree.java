@@ -5,13 +5,13 @@ import java.awt.*;
 public class Tree {
 
     // Class Attributes - static attributes
-    public static Color TRUNK_COLOR = new Color(0, 102, 10, 144);      // trunk_color :: red,green,blue
+    protected static Color TRUNK_COLOR = new Color(0, 102, 10, 144);      // trunk_color :: red,green,blue
 
 
     // Instance Attributes - non-static attributes
-    double heightFt;
-    double trunkDiameterInches;
-    TreeType treeType; // Enum type
+    private double heightFt;
+    private double trunkDiameterInches;
+    private TreeType treeType; // Enum type
 
     // Constructor
     public Tree(double heightFt, double trunkDiameterInches, TreeType treeType) {
@@ -43,7 +43,6 @@ public class Tree {
             System.out.format("%s Tree is not tall%n", this.treeType);
         }
     }
-
 
     // getter and setter
     public double getHeightFt() {

@@ -20,6 +20,14 @@ public class simulator {
         tree1.announceTallTree();
         tree2.announceTallTree();
 
+        // Testing Encapsulation
+        // Accessing the Tree attributes through getter and setter
+        System.out.println(tree1.getTreeType());
+        System.out.println(tree1.getHeightFt());
+        System.out.println(tree1.getTrunkDiameterInches());
+        tree1.setTreeType(TreeType.PECAN);
+        System.out.println(tree1);
+
 
     }
 }

@@ -4,6 +4,7 @@ import org.jarotball.ds.ArrayExercise;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 
 public class HelloWorld {
@@ -15,5 +16,8 @@ public class HelloWorld {
         System.out.println(Arrays.toString(input));
         List l=List.of(1,2,3,"test");
         System.out.println(l.get(l.size()-1));
+
+        //
+        Stack<Character> charStack = new Stack<>();
     }
 }
