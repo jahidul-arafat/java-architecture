@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -16,26 +17,34 @@ public class ConditionArrayList extends ArrayList<Integer> {
     Predicate<Integer> condition;
 
     // constructor
-    // Constructor-01 -- Default Constructor
-    public ConditionArrayList(Predicate<Integer> condition) {
-        this.condition = condition;
-    }
+    // Constructor-01 - This ensures Compile Time Polymorphism
+    // Interger... nums >> Zero or More numbers
+//    public ConditionArrayList(Predicate<Integer> condition,Integer... nums) {
+//        super(Arrays.stream(nums)
+//                .filter(condition)
+//                .collect(Collectors.toList()));
+//    }
 
-    // Constructor-02
+    // Constructor-1 will use Constructor-4
     public ConditionArrayList(Predicate<Integer> condition,Integer... nums) {
-        super(Arrays.stream(nums)
-                .filter(condition)
-                .collect(Collectors.toList()));
+        super(new ConditionArrayList(condition,Arrays.asList(nums))); // using Constructor-4
     }
 
-    // Constructor-03
-    public ConditionArrayList(@NotNull Collection<? extends Integer> c, Predicate<Integer> condition) {
+    // Constructor-02 - Compile time polymorphism
+    public ConditionArrayList(Predicate<Integer> condition,@NotNull Collection<? extends Integer> c) {
         super(c.stream()
                 .filter(condition)
                 .collect(Collectors.toList()));
         this.condition=condition;
     }
 
+    // Constructor-04 - For Compile time polymorphism
+    public ConditionArrayList(Predicate<Integer> condition, List<Integer> arrayList) {
+        super(arrayList.stream()
+                .filter(condition)
+                .collect(Collectors.toList()));
+        this.condition = condition;
+    }
 
     // overriding the superclass methods
     /*
@@ -84,7 +93,7 @@ public class ConditionArrayList extends ArrayList<Integer> {
         }
     }
 
-    private <Integer> boolean isEligible(int element){
+    public <Integer> boolean isEligible(int element){
         return condition.test(element);
     }
 
