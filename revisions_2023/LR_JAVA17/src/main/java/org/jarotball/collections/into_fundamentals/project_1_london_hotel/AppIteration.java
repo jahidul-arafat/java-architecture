@@ -117,6 +117,54 @@ public class AppIteration {
                 .collect(Collectors.toList());
         System.out.println(filteredRoomsByType);
 
+        // 11. Get all the PetFriendly Rooms into a new Collection
+        roomCollection.stream()
+                .filter(Room::isPetFriendly)
+                .map(room -> room.getName())
+                        .collect(Collectors.toList())
+                                .forEach(System.out::println);
+
+        // 12. Get the Rate of all the petFriendly Rooms
+        var petFndlyRoomRent=roomCollection.stream()
+                .filter(Room::isPetFriendly)
+                .map(r->r.getRate())
+                .collect(Collectors.toList());
+        System.out.println(petFndlyRoomRent);
+
+        // 13. Get the rents by petFndly and non-petFndly Category
+        var roomRateByPetCat=roomCollection.stream()
+                .collect(Collectors.groupingBy(Room::isPetFriendly))
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        (entry)-> entry.getKey(),
+                        (entry)-> entry.getValue()
+                                .stream()
+                                .map(Room::getRate)
+                                .collect(Collectors.toList())
+                ));
+        System.out.println(roomRateByPetCat);
+
+        // 14. Get total roomRent by petFndly and non-petFndly category
+        var roomRateSumByPetCat=roomCollection.stream()
+                .collect(Collectors.groupingBy(Room::isPetFriendly))
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        e-> e.getKey(),
+                        e-> e.getValue()
+                                .stream()
+                                .mapToDouble(Room::getRate)
+                                .sum()
+                ));
+        System.out.println(roomRateSumByPetCat);
+
+
+
+
+
+
+
 
     }
 }
