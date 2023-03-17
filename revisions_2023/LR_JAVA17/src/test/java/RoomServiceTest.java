@@ -15,7 +15,7 @@ public class RoomServiceTest {
     Room[] rooms;
 
     @BeforeEach
-    public void setUp() throws Exception{
+    public void setUp(){
         Room cambridge = new Room("Cambridge", "Premiere Room", 4, 175.00);
         Room manchester = new Room("Manchester", "Suite", 5, 250.00);
         Room piccadilly = new Room("Piccadilly", "Guest Room", 3, 125.00);
