@@ -1,5 +1,5 @@
-import org.jarotball.collections.into_fundamentals.project_1_london_hotel.Room;
-import org.jarotball.collections.into_fundamentals.project_1_london_hotel.RoomService;
+import org.jarotball.collections.project_1_london_hotel.Room;
+import org.jarotball.collections.project_1_london_hotel.RoomService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
