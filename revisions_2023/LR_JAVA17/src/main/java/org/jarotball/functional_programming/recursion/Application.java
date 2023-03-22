@@ -70,6 +70,32 @@ public class Application {
         return fibonacci(nthElement-1)+ fibonacci(nthElement-2);
     }
 
+    // Using recursion to check if a number is palindrom  or not
+    // Palindrom words: geeg
+    public static <T> boolean isPalindrome(T str){
+        String pStr = String.valueOf(str);
+        return isPalindromeHelper(pStr,0,pStr.length()-1);
+    }
+    public static boolean isPalindromeHelper(String str, int startIndex, int endIndex){
+        // Base Case-01: Check if the startIndex >= endIndex;
+        // i.e. for 'geeeg', the simulation would happen this way
+        /*
+            -   0   1   2   3   4
+                g   e   e   e   g
+            # Call-1: index[0], index[4]
+            # Call-2: index[1], index[3]
+            # Call-3: index[2], index[2] -- stops here, means palindrome found as startIndex(2) == endIndex(2)
+         */
+        if (startIndex>=endIndex)
+            return true;
+
+        //Base Case-02: If any two respective index had a mismatch of character, then leave it not to be plaindrom
+        if (str.charAt(startIndex)!=str.charAt(endIndex))
+            return false;
+
+        // If any of these two base condition dont hit, then make the recursive call
+        return isPalindromeHelper(str,startIndex+1,endIndex-1);
+    }
 
 
     public static void main(String[] args) {
@@ -81,6 +107,9 @@ public class Application {
         fibonacciIterative(10);
         System.out.println();
         System.out.println(fibonacci(8));
+
+        // Palindrome cheker
+        System.out.println(isPalindrome("geege"));
 
     }
 }

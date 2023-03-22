@@ -38,7 +38,7 @@ public class Application {
         List<Employee> empList = Arrays.asList(empArray);
 
 
-        // 1. (a) Revers EmpName and then (b) Convert to Upper case
+        // 1. (a) Reverse EmpName and then (b) Convert to Upper case
         Function<Employee, String> fX = employee -> employee.getfName();
 
         Function<String,String> gX=(name)->
