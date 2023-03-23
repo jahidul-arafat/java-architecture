@@ -20,5 +20,7 @@ public class BasicMapOps {
                 .map(num -> timesTwo.apply(num))
                 .collect(Collectors.toList());
         System.out.println(doubledNumList);
+
+
     }
 }

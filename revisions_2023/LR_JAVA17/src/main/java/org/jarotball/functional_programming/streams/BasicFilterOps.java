@@ -26,6 +26,9 @@ public class BasicFilterOps {
                 .collect(Collectors.toList());
         System.out.println(oddList);
 
+        // Filter words by minLength
+
+
 
     }
 }
