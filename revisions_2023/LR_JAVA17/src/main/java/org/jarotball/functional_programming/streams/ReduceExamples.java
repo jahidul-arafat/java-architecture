@@ -13,6 +13,7 @@ public class ReduceExamples {
         Integer[] numArr = {1,2,3,4,5,6,7,8,9,10};
         List<Integer> numList = Arrays.asList(numArr);
 
+
         // Way-01
         var sumOfOdds = numList.stream()
                 .filter(n-> n%2!=0)

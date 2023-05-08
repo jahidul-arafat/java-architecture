@@ -38,6 +38,12 @@ public class TourRatingService {
     }
      */
     // For POST /tours/{tourId}/ratings  with RatingDTO as the JSON/payload in the Body
+    /*
+    For this MongoDb Microservice, if you remove verifyTour() from
+    TourRatingController.createTourRating() AND invoke the API to create a
+    rating for a non-existent tour, then the API will return a 201 Created Response. --> TRUE
+    --> So verifyTour must be there
+     */
     public void createTourRating(String tourId, TourRating tourRating){
         // verify the tourId and return the tour
         Tour tour = verifyTour(tourId); // set a breakpoint here for debug to check if the RatingDTO is really being created and validated
@@ -96,7 +102,7 @@ public class TourRatingService {
     // Business Service-4: Update Score and Comment of a Tour Rating
     // 4.1 Update with HTTP PUT Method - update if exists, else create
     // Semantics of PUT is >> All the attributes are updated
-    // Update with bag/DTO
+
     public TourRating updateWithPut(String tourId, TourRating tourRating){
         // first, verify the tour rating given tourId and customerId
         TourRating rating= verifyTourRating(tourId,tourRating.getCustomerId());
