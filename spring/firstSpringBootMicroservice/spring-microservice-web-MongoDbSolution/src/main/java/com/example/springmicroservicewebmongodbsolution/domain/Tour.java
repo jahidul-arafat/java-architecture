@@ -14,12 +14,9 @@ id      title   tourPackageCode     tourPackageName     details
 ----------------------------------------------------------------
  */
 @Document   // An Entity of A Table
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
 public class Tour {
 
     // A. Tour Main Attributes

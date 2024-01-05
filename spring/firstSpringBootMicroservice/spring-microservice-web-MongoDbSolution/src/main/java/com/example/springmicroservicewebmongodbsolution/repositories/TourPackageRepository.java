@@ -33,49 +33,7 @@ public interface TourPackageRepository extends CrudRepository<TourPackage, Strin
 
     // Non-default method; created by me // not available in CRUD
 
-    /**
-     *
-     * @param pkgName name of the package
-     * @return Optional of TourPackage
-     */
     // Find the TourPackage by TourPackageName // int the ExploreCalifornia.json we are passing the TourPackageName linked to a Tour
     Optional<TourPackage> findByName(@Param("name") String pkgName); // http://localhost:9090/tourPackages/search
-    // in the TourService, when creating a new tour, tour has a dependency of tourPackage (must be already exists)
-    // in the create a new tour section in TourService, we not gonna enter the tourPackage code, instead tourPackageName
-    // by default, JpaRepository doesnt has anything for the query call with the tourPackageName ior nothing like findByName()
-    // instead it has findById() which is not applicable in our case
-    // so, the solution is, define an abstract method named findByName(String pkgName) which may either query return somethign or nothing.
-    /// thats why the return type is defined as Optional
 
-
-    // now override the default Create, Update and Delete methods of JpaRepository
-    // And make them publicly unavailable by using @RestResource(exported=false)
-
-    @Override
-    @RestResource(exported = false)
-    <S extends TourPackage> List<S> saveAll(Iterable<S> entities);
-
-    @Override
-    @RestResource(exported = false)
-    <S extends TourPackage> S save(S entity);
-
-    @Override
-    @RestResource(exported = false)
-    void deleteById(String s);
-
-    @Override
-    @RestResource(exported = false)
-    void delete(TourPackage entity);
-
-    @Override
-    @RestResource(exported = false)
-    void deleteAllById(Iterable<? extends String> strings);
-
-    @Override
-    @RestResource(exported = false)
-    void deleteAll(Iterable<? extends TourPackage> entities);
-
-    @Override
-    @RestResource(exported = false)
-    void deleteAll();
 }

@@ -7,6 +7,7 @@ import com.example.springmicroservicewebmongodbsolution.repositories.TourReposit
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 /*
@@ -68,6 +69,11 @@ public class TourService {
     // .count
     public long total(){
         return tourRepository.count();
+    }
+
+    // method to find Summary By TourPackageCode
+    public List<Tour> findSummaryByTourPackageCode(String code){
+        return tourRepository.findSummaryByTourPackageCode(code);
     }
 
 

@@ -7,8 +7,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CreateTourPackages {
 
-    @Autowired // keep the Autowired here as I am gonna call a CommandLineRunner which need to autowire the required services during CRL run
-    private TourPackageService tourPackageService;
+      private final TourPackageService tourPackageService;
+
+    // constructor
+    public CreateTourPackages(TourPackageService tourPackageService) {
+        this.tourPackageService = tourPackageService;
+    }
     // // Create a list of Tour Packages
     // first check whether the tourPackage is already exists in the JpaRepository
     // if so, then return

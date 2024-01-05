@@ -15,13 +15,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 * - Object Equality and Hashing
 * */
 @Document
+@Data
 @AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
-
 public class TourPackage {
 
     @Id

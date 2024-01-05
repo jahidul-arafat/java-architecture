@@ -30,12 +30,8 @@ id      tourId      customerId      score       comment
 
  */
 @Document
+@Data
 @AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
 public class TourRating {
     /*
     *
