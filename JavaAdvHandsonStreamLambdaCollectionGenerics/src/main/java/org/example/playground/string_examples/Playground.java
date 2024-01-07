@@ -101,8 +101,6 @@ public class Playground {
         System.out.printf("sb1Str[Hash]: %s%n", System.identityHashCode(sb1Str)); // 868
         System.out.printf("strAtStringPool1==sb1Str: %s%n", strAtStringPool1 == sb1Str);
         System.out.printf("sb1==sb2: %s%n", sb1.toString() == sb2.toString());
-
-
     }
 
 
