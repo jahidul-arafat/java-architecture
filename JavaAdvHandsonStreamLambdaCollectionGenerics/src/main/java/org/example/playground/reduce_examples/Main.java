@@ -1,3 +1,7 @@
+/*
+By Jahidul Arafat, Solution Architect (AppDev and DevOps)
+
+ */
 package org.example.playground.reduce_examples;
 
 import java.util.ArrayList;
