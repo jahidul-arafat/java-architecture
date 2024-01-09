@@ -14,6 +14,7 @@ public class Playground {
         numList.add(100); // mutable List
         System.out.println(numList);
 
+        // By Jahidul Arafat, Solution Architect (AppDev and DevOps)
         // Example: Loop Unrolling
         // Question: As a Java Developer, do you really need to explicitly request Loop Unrolling? -> NO
         // Solution: JVM is responsible for performance optimization, including loop unrolling, during JIT compilation phase.

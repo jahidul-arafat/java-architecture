@@ -1,8 +1,6 @@
 package org.example.playground.map_examples;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -10,7 +8,7 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         // define a list of integers from 1 to 10
-        Integer[] intArr = {1,2,3,4,5,6,7,8,9,10};
+        Integer[] intArr = {1,1,2,1,3,2,4,5,6,7,8,9,10};
         List<Integer> intList = new ArrayList<>(Arrays.asList(intArr));
 
         // Define a BiFunction Function which takes two arguments and returns a value multiple by N
@@ -42,7 +40,7 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println(intList2);
 
-        String[] intStrArr={"1.2","2","3","4","5","6","7","8","9","10"};
+        String[] intStrArr={"1.2","2","3","4","5","6","7","8","9","10","1.2"};
         List<String> intStrList = new ArrayList<>(Arrays.asList(intStrArr));
         var intStrListInt = intStrList.stream()
                 .map(Double::parseDouble)
@@ -63,6 +61,28 @@ public class Main {
                 .map(timesFactory3::apply)
                 .collect(Collectors.toList());
         System.out.println(intListTimes3);
+
+        // count the occurrence of each number in the intList where return type is Map<Integer,Integer>
+        Map<Integer,Long> countMap = intList.stream()
+               .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(countMap);
+
+        Map<Double,Long> countIntStrMap = intStrList.stream()
+                .map(Double::parseDouble)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        /*
+        Collectors.groupingBy(Function.identity(), Collectors.counting())
+        - means, group the elements by their identity (here, identity is the number itself),
+        - and count the number of times each element appears in the stream.
+         */
+        System.out.println(countIntStrMap);
+        System.out.println(countIntStrMap.get(2.0));
+
+        // take user input from the user using scanner
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        var userInput = scanner.nextDouble();
+        System.out.println(countIntStrMap.get(userInput));
 
 
 
