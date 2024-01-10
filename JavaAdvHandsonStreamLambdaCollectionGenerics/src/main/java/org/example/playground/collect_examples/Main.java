@@ -9,7 +9,7 @@ import static org.example.playground.collect_examples.Playground.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Main method to simulate the Playground methods
+        // PersonSimulator method to simulate the Playground methods
         // a list of strings
         String[] wrdArr = {"abc","Hello", "world", "Jahidul", "Arafat", "world", "!",null};
         List<String> wrdList = Arrays.asList(wrdArr);
